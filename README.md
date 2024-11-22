@@ -1,9 +1,9 @@
 # Krke Project
 
 ### Part 1
-1. Identify the topic, then provide an introduction (Alice)  22.11.24 - done
+1. Identify the topic, then provide an introduction (Alice)  /22.11.24 - done/
    **Deadline: November 23**
-2. Followed by the theoretical framework (Sergei/Alice)  22.11.24 - draft by Alice
+2. Followed by the theoretical framework (Sergei/Alice)  /22.11.24 - draft by Alice/
    **Deadline: November 26**
 3. And the methodology section (Fran/Zizhe)  
    **Deadline: November 30**
