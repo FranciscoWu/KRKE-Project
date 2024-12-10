@@ -1,0 +1,77 @@
+---
+
+### **New Classes and Properties**
+
+#### **Overview**
+The second-level modeling refines the elemental ontology by integrating Aldo Gangemi's PERSPECTIVISATION ontology. Key classes and properties such as **Background**, **Cut**, **Lens**, **Eventuality**, and **Attitude** are added to represent multiple viewpoints and the dynamic nature of identity and perception in youth subcultures. 
+
+The ontology uses **punning** to allow elements like **viewpoints** and **attitudes** to function as both abstract classes and specific instances, supporting both theoretical analysis (intensional reasoning) and practical applications (extensional use). 
+
+---
+
+### **Classes**
+
+- **ExternalViewpoint**:  
+  Represents perspectives of non-participants in a subculture.  
+  *Disjoint with InternalViewpoint.*
+
+- **InternalViewpoint**:  
+  Represents the self-perception of subculture members, including their identity and interpretation of their place within the subculture.
+
+- **Influence**:  
+  Covers factors affecting interpretations of subcultures, such as media, social institutions, education, and cultural trends. Includes Hall's Encoding/Decoding theory.
+
+- **PerspectiveShift**:  
+  Captures evolving attitudes, stereotypes, and self-perceptions of subcultures over time and across contexts.
+
+- **Stereotype**:  
+  Generalizations about subcultures, based on Cardwell’s definition. Includes societal misrepresentations and biases shaping public discourse.
+
+- **PositiveAttitude / NegativeAttitude / NeutralAttitude**:  
+  Represents evaluative stances toward subcultures:  
+    - *Positive*: Aligns with moral values.  
+    - *Negative*: Often linked to stereotypes.  
+    - *Neutral*: A mix of positive and negative.
+
+---
+
+### **Properties**
+
+- **hasViewpoint**:  
+  Links a person to an Internal/External viewpoint.  
+  *Inverse: isViewpointOf.*
+
+- **hasAttitude**:  
+  Connects a person to Positive/Negative/Neutral attitudes.  
+  *Inverse: isAttitudeOf.*
+
+- **influencedBy**:  
+  Links attitudes to their influences.  
+  *Inverse: influences.*
+
+- **triggersStereotype**:  
+  Links subcultures to stereotypes.
+
+- **isCharacterisedBy**:  
+  Links viewpoints to the perspective shifts they determine. 
+
+- **expressedVia**:  
+  Denotes attitudes shaped by stereotypes or values.  
+  *Inverse: expresses.*
+
+- **determines**:  
+  Links viewpoints to specific attitudes.
+
+- **hasPerceptionOf**:  
+  Connects non-participants to subcultures.
+
+- **hasInfluencingFactors**:  
+  Links subcultures to influencing factors.
+
+- **hasPerspectiveShift**:  
+  Relates subcultures to perspective shifts.
+
+---
+
+### **Significance**
+This refined ontology provides a richer representation of youth subcultures by modeling their dynamic identity and societal perceptions. It enables nuanced analysis of stereotypes, attitudes, and influences, bridging theoretical and practical applications.
