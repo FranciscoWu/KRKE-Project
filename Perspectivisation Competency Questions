@@ -1,0 +1,113 @@
+###Perspectivisation Competency Questions  
+#### Competency Questions and SPARQL Queries on Second-Level Modelling  
+
+Based on user scenarios created in collaboration with LLMs, we derived the following competency questions to address the perspectives and influences surrounding educational systems. These questions guided the formulation of SPARQL queries, ensuring the ontology effectively meets the informational needs identified during scenario analysis.  
+
+---
+
+#### Prefixes  
+To use the SPARQL queries below, the following prefixes must be included:  
+
+```sparql
+PREFIX edu: <http://www.semanticweb.org/ontologies/2024/EDU/>
+PREFIX persp: <http://www.ontologydesignpatterns.org/ont/persp/perspectivisation.owl#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+```  
+
+---
+
+### Competency Questions and Corresponding Queries  
+
+1. **Which individuals have an external viewpoint regarding free education systems?**  
+   **SPARQL Query:**  
+   ```sparql
+   SELECT ?people
+   WHERE {
+     ?people edu:hasPerspectiveOf edu:FreeEducationSystem .
+   }
+   ```
+
+2. **Which individuals have a negative attitude towards paid education systems?**  
+   **SPARQL Query:**  
+   ```sparql
+   SELECT ?person 
+   WHERE {
+       ?person edu:hasAttitude edu:NegativeAttitude .
+       ?person edu:hasPerspectiveOf edu:PaidEducationSystem .
+   }
+   ```
+
+3. **What factors contribute to negative attitudes towards free education systems?**  
+   **SPARQL Query:**  
+   ```sparql
+   SELECT ?influence ?content
+   WHERE {
+     edu:FreeEducationSystem edu:hasInfluencingFactors ?influence .
+     ?influence edu:influences edu:NegativeAttitude .
+     ?influence edu:hasContent ?content .
+   }
+   ```
+
+4. **What factors contribute to positive attitudes toward paid education systems?**  
+   **SPARQL Query:**  
+   ```sparql
+   SELECT ?influence ?content
+   WHERE {
+     edu:PaidEducationSystem edu:hasInfluencingFactors ?influence .
+     ?influence edu:influences edu:PositiveAttitude .
+     ?influence edu:hasContent ?content .
+   }
+   ```
+
+5. **What are the outcoming interpretations of the process of perspectivisation on free education systems?**  
+   **SPARQL Query:**  
+   ```sparql
+   SELECT ?perspectiveShift ?content
+   WHERE {
+     edu:FreeEducationSystem edu:hasPerspectiveShift ?perspectiveShift .
+     ?perspectiveShift edu:hasContent ?content .
+   }
+   ```
+
+6. **Which stereotypes are associated with paid education systems?**  
+   **SPARQL Query:**  
+   ```sparql
+   SELECT ?stereotype 
+   WHERE {
+     ?stereotype rdf:type edu:Stereotype .
+     edu:PaidEducationSystem edu:triggersStereotype ?stereotype .
+   }
+   ```
+
+7. **What are the attitudes held by participants in free education systems?**  
+   **SPARQL Query:**  
+   ```sparql
+   SELECT ?participant ?attitude
+   WHERE {
+     edu:FreeEducationSystem edu:hasParticipant ?participant .
+     ?participant edu:hasAttitude ?attitude .
+   }
+   ```
+
+---
+
+#### Data Property Visualization  
+
+To visualize the content of entities such as `Influence`, `PerspectiveShift`, or `Stereotype`, include the `edu:hasContent` data property in the query.  
+
+**Example:**  
+```sparql
+SELECT ?perspectiveShift ?content
+WHERE {
+  edu:FreeEducationSystem edu:hasPerspectiveShift ?perspectiveShift .
+  ?perspectiveShift edu:hasContent ?content .
+}
+```
+
+---
+
+These competency questions and SPARQL queries allow researchers to analyze how various perspectives shape and are shaped by free and paid education systems. They also uncover insights into the attitudes, influences, and stereotypes associated with these systems, supporting nuanced analyses of educational dynamics.  
