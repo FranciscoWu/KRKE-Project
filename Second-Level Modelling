@@ -1,0 +1,54 @@
+# Second-Level Modelling
+## Level 2: Perspectivisation Frame Integration
+In this phase, the team examined Gangemi and Presutti's work on Formal Representation and Extraction of Perspectives to refine the ontology's ability to comprehensively represent and analyse the differences between free and paid education systems. This refinement enhanced the ontology's capacity to capture diverse educational contexts and their implications for learners, providers, and outcomes. Furthermore, this is aimed to ensure interoperability with other ontologies, enhancing the EDU ontology’s applicability in fields such as Education Studies, Digital Humanities, and Social Sciences.
+
+### Perspectivisation
+__New Classes__
+To expand the ontology's scope and refine its representation of educational systems, the following classes were introduced:
+    1. edusont:Perspective
+        Represents differing viewpoints about education, such as:
+            __External (Societal) Perspectives:__ General opinions on the value, accessibility, or credibility of free versus paid systems.
+            __Internal (Learner) Perspectives:__ Individual perceptions, motivations, and experiences with educational systems.
+
+    2. edusont:EducationComparison
+A class dedicated to structuring comparisons between the attributes of free and paid education systems. This enables analysis of factors such as cost, accessibility, and effectiveness.
+
+    3. edusont:Demographics
+Captures demographic data (e.g., age, location, income level) to contextualise learners’ access to and preferences for different educational systems.
+
+__New Properties__
+To connect the newly introduced and existing concepts, the following properties were added:
+  > edusont:hasPerspective
+Links an educational system or content to a perspective (external or internal). Example:
+A free educational system can have the perspective "Highly accessible but less comprehensive," reflecting societal views.
+
+  >edusont:isPreferredBy
+Relates edusont:EducationalSystem to edusont:LearnerDemographics, capturing which systems are favoured by specific learner groups.
+
+  >edusont:comparesTo
+Links an instance of edusont:EducationComparison with two educational systems, enabling structured analyses.
+
+  >edusont:hasImpactOn
+Represents the impact of a perspective on an outcome, linking edusont:Perspective to edusont:Outcome.
+
+__Ontology Alignment__
+  To ensure consistency, the EDU ontology integrates elements from existing ontologies, such as the __Perspectivisation Ontology__ and the __FrameNet Ontology__:
+    __Classes and Properties Integration__
+The EDU ontology uses existing classes like frame:Perspective and frame:AgentiveRole to define roles and contexts in educational settings.
+Properties like __frame:hasAgent__ are reused to link learners and perspectives.
+
+    __Interoperability__
+The alignment ensures that the EDU ontology can interoperate with broader educational frameworks and data sets, allowing for comparative studies and integration with other research initiatives.
+
+## Examples of Application
+  __1. Analysing Perspectives__
+    External perspectives: How governments or organisations perceive the role of free educational systems in reducing inequality.
+    Internal perspectives: How learners from different demographics experience and value paid education systems.
+
+  __2. Comparison Framework__
+Comparing free and paid education on cost, accessibility, and perceived quality, structured within the edusont:EducationComparison class.
+
+  __3. Understanding Impact__
+Exploring how societal attitudes (captured via edusont:Perspective) influence learner outcomes, such as satisfaction or career progression.
+
+This perspectivisation-based refinement ensures the EDU ontology can represent not only the factual aspects of education systems but also the complex and often subjective viewpoints surrounding them. The integration of perspectives allows for a nuanced understanding of education's role in society and its impact on individuals.
