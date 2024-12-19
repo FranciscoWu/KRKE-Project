@@ -12,6 +12,7 @@ By employing punning for viewpoints and attitudes, we ensure dual interpretation
 
 **ExternalViewpoint**  
 Represents the perspective of individuals or institutions outside the educational system, such as parents, policymakers, or media entities.  
+
 - Disjoint with InternalViewpoint.  
 
 **InternalViewpoint**  
