@@ -1,0 +1,1661 @@
+@prefix : <http://www.semanticweb.org/ontologies/2024/EDU/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Instance 1: Bachelor of Science at University of Helsinki
+:Bachelor_of_Science_1 rdf:type :Learner ;
+    rdfs:label "Bachelor of Science"@en ;
+    :choosesEducationalPath :FreeSystem_Helsinki ;
+    :hasLearningObjective "Gain foundational STEM knowledge" ;
+    :hasDemographics :Demographics_Helsinki_1 .
+
+:Demographics_Helsinki_1 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "21" ;
+    :locatedIn "Helsinki" ;
+    :hasIncomeLevel "Medium" .
+
+:FreeSystem_Helsinki rdf:type :FreeSystem ;
+    rdfs:label "University of Helsinki BSc Program"@en ;
+    :isUsedBy :Bachelor_of_Science_1 ;
+    :deliversContent :Content_Helsinki_BSc ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "Respected globally" ;
+    :hasOutcome :Outcome_Helsinki_BSc .
+
+:Content_Helsinki_BSc rdf:type :Content ;
+    rdfs:label "BSc STEM Content"@en ;
+    :hasDeliveryMethod "Traditional classroom and laboratory" ;
+    :hasContentFormat "Mixed format" .
+
+:Outcome_Helsinki_BSc rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Alumni networking events" ;
+    :hasPersonalGrowth "Confidence building" ;
+    :hasImpactOnCareer "Increased employability" ;
+    :hasSkillDevelopment "Foundational STEM skills" .
+
+# Instance 2: Master's in AI at Stanford University
+:Masters_AI_2 rdf:type :Learner ;
+    rdfs:label "Master's in AI Student"@en ;
+    :choosesEducationalPath :PaidSystem_Stanford ;
+    :hasLearningObjective "Master advanced AI methodologies" ;
+    :hasDemographics :Demographics_Stanford_2 .
+
+:Demographics_Stanford_2 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "28" ;
+    :locatedIn "California" ;
+    :hasIncomeLevel "High" .
+
+:PaidSystem_Stanford rdf:type :PaidSystem ;
+    rdfs:label "Stanford AI Master's Program"@en ;
+    :isUsedBy :Masters_AI_2 ;
+    :deliversContent :Content_Stanford_AI ;
+    :hasCredibility "Very High" ;
+    :hasSocietalPerception "World-leading institution" ;
+    :hasOutcome :Outcome_Stanford_AI .
+
+:Content_Stanford_AI rdf:type :Content ;
+    rdfs:label "Advanced AI Curriculum"@en ;
+    :hasDeliveryMethod "Hybrid learning" ;
+    :hasContentFormat "Digital and hands-on" .
+
+:Outcome_Stanford_AI rdf:type :Outcome ;
+    :hasNetworkingOpportunities "AI research groups" ;
+    :hasPersonalGrowth "Research expertise" ;
+    :hasImpactOnCareer "Innovative research capability" ;
+    :hasSkillDevelopment "Advanced AI and ML skills" .
+
+# Instance 3: Medical Student at Karolinska Institute
+:Medical_Student_3 rdf:type :Learner ;
+    rdfs:label "Medical Student"@en ;
+    :choosesEducationalPath :FreeSystem_Karolinska ;
+    :hasLearningObjective "Develop clinical and research skills" ;
+    :hasDemographics :Demographics_Karolinska_3 .
+
+:Demographics_Karolinska_3 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "27" ;
+    :locatedIn "Stockholm" ;
+    :hasIncomeLevel "Medium" .
+
+:FreeSystem_Karolinska rdf:type :FreeSystem ;
+    rdfs:label "Karolinska Institute Medical Program"@en ;
+    :isUsedBy :Medical_Student_3 ;
+    :deliversContent :Content_Karolinska_Med ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "Globally renowned institution" ;
+    :hasOutcome :Outcome_Karolinska_Med .
+
+:Content_Karolinska_Med rdf:type :Content ;
+    rdfs:label "Medical Education"@en ;
+    :hasDeliveryMethod "Clinical practice and theory" ;
+    :hasContentFormat "Mixed format" .
+
+:Outcome_Karolinska_Med rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Clinical practice seminars" ;
+    :hasPersonalGrowth "Professional development" ;
+    :hasImpactOnCareer "Medical practice qualification" ;
+    :hasSkillDevelopment "Clinical and research skills" .
+
+# Instance 4: Animation Student at Gobelins School
+:Animation_Student_4 rdf:type :Learner ;
+    rdfs:label "Animation Student"@en ;
+    :choosesEducationalPath :PaidSystem_Gobelins ;
+    :hasLearningObjective "Develop professional animation skills" ;
+    :hasDemographics :Demographics_Gobelins_4 .
+
+:Demographics_Gobelins_4 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "21" ;
+    :locatedIn "Paris" ;
+    :hasIncomeLevel "High" .
+
+:PaidSystem_Gobelins rdf:type :PaidSystem ;
+    rdfs:label "Gobelins Animation Program"@en ;
+    :isUsedBy :Animation_Student_4 ;
+    :deliversContent :Content_Gobelins_Animation ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "Leading animation school" ;
+    :hasOutcome :Outcome_Gobelins_Animation .
+
+:Content_Gobelins_Animation rdf:type :Content ;
+    rdfs:label "Animation Curriculum"@en ;
+    :hasDeliveryMethod "Studio-based learning" ;
+    :hasContentFormat "Practical and digital" .
+
+:Outcome_Gobelins_Animation rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Animation festivals" ;
+    :hasPersonalGrowth "Creative development" ;
+    :hasImpactOnCareer "Animation industry placement" ;
+    :hasSkillDevelopment "Professional animation techniques" .
+
+# Instance 5: UX Design Student at General Assembly
+:UX_Design_Student_5 rdf:type :Learner ;
+    rdfs:label "UX Design Student"@en ;
+    :choosesEducationalPath :PaidSystem_GA ;
+    :hasLearningObjective "Develop practical UX design skills" ;
+    :hasDemographics :Demographics_GA_5 .
+
+:Demographics_GA_5 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "25" ;
+    :locatedIn "New York" ;
+    :hasIncomeLevel "Medium" .
+
+:PaidSystem_GA rdf:type :PaidSystem ;
+    rdfs:label "General Assembly UX Design Program"@en ;
+    :isUsedBy :UX_Design_Student_5 ;
+    :deliversContent :Content_GA_UX ;
+    :hasCredibility "Medium" ;
+    :hasSocietalPerception "Industry-recognized bootcamp" ;
+    :hasOutcome :Outcome_GA_UX .
+
+:Content_GA_UX rdf:type :Content ;
+    rdfs:label "UX Design Curriculum"@en ;
+    :hasDeliveryMethod "Intensive bootcamp" ;
+    :hasContentFormat "Project-based" .
+
+:Outcome_GA_UX rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Design community meetups" ;
+    :hasPersonalGrowth "Professional portfolio" ;
+    :hasImpactOnCareer "UX design career transition" ;
+    :hasSkillDevelopment "User research and design" .
+
+# Instance 6: Business MBA Candidate at Harvard Business School
+:Business_MBA_6 rdf:type :Learner ;
+    rdfs:label "Business MBA Candidate"@en ;
+    :choosesEducationalPath :PaidSystem_Harvard ;
+    :hasLearningObjective "Gain advanced leadership skills" ;
+    :hasDemographics :Demographics_Harvard_6 .
+
+:Demographics_Harvard_6 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "30" ;
+    :locatedIn "Boston" ;
+    :hasIncomeLevel "High" .
+
+:PaidSystem_Harvard rdf:type :PaidSystem ;
+    rdfs:label "Harvard Business School MBA Program"@en ;
+    :isUsedBy :Business_MBA_6 ;
+    :deliversContent :Content_Harvard_MBA ;
+    :hasCredibility "Very High" ;
+    :hasSocietalPerception "World-leading business school" ;
+    :hasOutcome :Outcome_Harvard_MBA .
+
+:Content_Harvard_MBA rdf:type :Content ;
+    rdfs:label "MBA Curriculum"@en ;
+    :hasDeliveryMethod "Case method and classroom" ;
+    :hasContentFormat "Mixed format" .
+
+:Outcome_Harvard_MBA rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Global business conferences" ;
+    :hasPersonalGrowth "Leadership development" ;
+    :hasImpactOnCareer "Executive positions" ;
+    :hasSkillDevelopment "Strategic management" .
+
+# Instance 7: Software Developer at UK Government Training
+:Software_Developer_7 rdf:type :Learner ;
+    rdfs:label "Software Developer Trainee"@en ;
+    :choosesEducationalPath :FreeSystem_UKGov ;
+    :hasLearningObjective "Build real-world software skills" ;
+    :hasDemographics :Demographics_UKGov_7 .
+
+:Demographics_UKGov_7 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "24" ;
+    :locatedIn "London" ;
+    :hasIncomeLevel "Medium" .
+
+:FreeSystem_UKGov rdf:type :FreeSystem ;
+    rdfs:label "UK Government Training Program"@en ;
+    :isUsedBy :Software_Developer_7 ;
+    :deliversContent :Content_UKGov_Dev ;
+    :hasCredibility "Medium" ;
+    :hasSocietalPerception "Government-backed program" ;
+    :hasOutcome :Outcome_UKGov_Dev .
+
+:Content_UKGov_Dev rdf:type :Content ;
+    :hasDeliveryMethod "Practical training" ;
+    :hasContentFormat "Project-based learning" .
+
+:Outcome_UKGov_Dev rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Tech community events" ;
+    :hasPersonalGrowth "Technical expertise" ;
+    :hasImpactOnCareer "Government tech roles" ;
+    :hasSkillDevelopment "Software development skills" .
+
+# Instance 8: Finance Graduate at London Business School
+:Finance_Graduate_8 rdf:type :Learner ;
+    rdfs:label "Finance Graduate"@en ;
+    :choosesEducationalPath :PaidSystem_LBS ;
+    :hasLearningObjective "Master financial leadership" ;
+    :hasDemographics :Demographics_LBS_8 .
+
+:Demographics_LBS_8 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "29" ;
+    :locatedIn "London" ;
+    :hasIncomeLevel "High" .
+
+:PaidSystem_LBS rdf:type :PaidSystem ;
+    rdfs:label "London Business School Finance Program"@en ;
+    :isUsedBy :Finance_Graduate_8 ;
+    :deliversContent :Content_LBS_Finance ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "Top finance institution" ;
+    :hasOutcome :Outcome_LBS_Finance .
+
+:Content_LBS_Finance rdf:type :Content ;
+    :hasDeliveryMethod "Mixed learning" ;
+    :hasContentFormat "Theory and practice" .
+
+:Outcome_LBS_Finance rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Finance industry events" ;
+    :hasPersonalGrowth "Financial expertise" ;
+    :hasImpactOnCareer "Investment banking roles" ;
+    :hasSkillDevelopment "Financial analysis" .
+
+# Instance 9: Medical Student at Karolinska Institute
+:Medical_Student_9 rdf:type :Learner ;
+    rdfs:label "Medical Student"@en ;
+    :choosesEducationalPath :FreeSystem_Karolinska_2 ;
+    :hasLearningObjective "Develop clinical skills" ;
+    :hasDemographics :Demographics_Karolinska_9 .
+
+:Demographics_Karolinska_9 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "27" ;
+    :locatedIn "Stockholm" ;
+    :hasIncomeLevel "Medium" .
+
+:FreeSystem_Karolinska_2 rdf:type :FreeSystem ;
+    rdfs:label "Karolinska Medical Program"@en ;
+    :isUsedBy :Medical_Student_9 ;
+    :deliversContent :Content_Karolinska_Med_2 ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "Leading medical school" ;
+    :hasOutcome :Outcome_Karolinska_Med_2 .
+
+:Content_Karolinska_Med_2 rdf:type :Content ;
+    :hasDeliveryMethod "Clinical practice" ;
+    :hasContentFormat "Hands-on learning" .
+
+:Outcome_Karolinska_Med_2 rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Medical conferences" ;
+    :hasPersonalGrowth "Clinical expertise" ;
+    :hasImpactOnCareer "Medical practice" ;
+    :hasSkillDevelopment "Medical procedures" .
+
+# Instance 10: Digital Marketing at Google Digital Garage
+:Digital_Marketing_10 rdf:type :Learner ;
+    rdfs:label "Digital Marketing Learner"@en ;
+    :choosesEducationalPath :FreeSystem_Google ;
+    :hasLearningObjective "Master digital marketing" ;
+    :hasDemographics :Demographics_Google_10 .
+
+:Demographics_Google_10 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "26" ;
+    :locatedIn "Madrid" ;
+    :hasIncomeLevel "Medium" .
+
+:FreeSystem_Google rdf:type :FreeSystem ;
+    rdfs:label "Google Digital Garage"@en ;
+    :isUsedBy :Digital_Marketing_10 ;
+    :deliversContent :Content_Google_Marketing ;
+    :hasCredibility "Medium" ;
+    :hasSocietalPerception "Industry-recognized" ;
+    :hasOutcome :Outcome_Google_Marketing .
+
+:Content_Google_Marketing rdf:type :Content ;
+    :hasDeliveryMethod "Online learning" ;
+    :hasContentFormat "Interactive modules" .
+
+:Outcome_Google_Marketing rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Online communities" ;
+    :hasPersonalGrowth "Digital skills" ;
+    :hasImpactOnCareer "Digital marketing roles" ;
+    :hasSkillDevelopment "Marketing strategies" .
+
+# Instance 11: Electrician Apprentice at Finnish Trade School
+:Electrician_11 rdf:type :Learner ;
+    rdfs:label "Electrician Apprentice"@en ;
+    :choosesEducationalPath :FreeSystem_Finnish_Trade ;
+    :hasLearningObjective "Master electrical skills" ;
+    :hasDemographics :Demographics_Finnish_11 .
+
+:Demographics_Finnish_11 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "22" ;
+    :locatedIn "Helsinki" ;
+    :hasIncomeLevel "Low" .
+
+:FreeSystem_Finnish_Trade rdf:type :FreeSystem ;
+    rdfs:label "Finnish Trade School"@en ;
+    :isUsedBy :Electrician_11 ;
+    :deliversContent :Content_Finnish_Electrical ;
+    :hasCredibility "Medium" ;
+    :hasSocietalPerception "Respected trade school" ;
+    :hasOutcome :Outcome_Finnish_Electrical .
+
+:Content_Finnish_Electrical rdf:type :Content ;
+    :hasDeliveryMethod "Practical training" ;
+    :hasContentFormat "Hands-on learning" .
+
+:Outcome_Finnish_Electrical rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Trade unions" ;
+    :hasPersonalGrowth "Technical skills" ;
+    :hasImpactOnCareer "Licensed electrician" ;
+    :hasSkillDevelopment "Electrical systems" .
+
+# Instance 12: Full-Stack Developer at Ironhack
+:FullStack_Developer_12 rdf:type :Learner ;
+    rdfs:label "Full-Stack Developer"@en ;
+    :choosesEducationalPath :PaidSystem_Ironhack ;
+    :hasLearningObjective "Web development mastery" ;
+    :hasDemographics :Demographics_Ironhack_12 .
+
+:Demographics_Ironhack_12 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "24" ;
+    :locatedIn "Berlin" ;
+    :hasIncomeLevel "Medium" .
+
+:PaidSystem_Ironhack rdf:type :PaidSystem ;
+    rdfs:label "Ironhack Bootcamp"@en ;
+    :isUsedBy :FullStack_Developer_12 ;
+    :deliversContent :Content_Ironhack_Dev ;
+    :hasCredibility "Medium" ;
+    :hasSocietalPerception "Modern tech bootcamp" ;
+    :hasOutcome :Outcome_Ironhack_Dev .
+
+:Content_Ironhack_Dev rdf:type :Content ;
+    :hasDeliveryMethod "Intensive bootcamp" ;
+    :hasContentFormat "Project-based" .
+
+:Outcome_Ironhack_Dev rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Tech meetups" ;
+    :hasPersonalGrowth "Coding expertise" ;
+    :hasImpactOnCareer "Web developer roles" ;
+    :hasSkillDevelopment "Full-stack development" .
+
+# Instance 13: PhD in Philosophy at University of Oxford
+:Philosophy_PhD_13 rdf:type :Learner ;
+    rdfs:label "Philosophy PhD Student"@en ;
+    :choosesEducationalPath :FreeSystem_Oxford ;
+    :hasLearningObjective "Advanced research" ;
+    :hasDemographics :Demographics_Oxford_13 .
+
+:Demographics_Oxford_13 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "33" ;
+    :locatedIn "Oxford" ;
+    :hasIncomeLevel "Medium" .
+
+:FreeSystem_Oxford rdf:type :FreeSystem ;
+    rdfs:label "Oxford Philosophy Program"@en ;
+    :isUsedBy :Philosophy_PhD_13 ;
+    :deliversContent :Content_Oxford_Phil ;
+    :hasCredibility "Very High" ;
+    :hasSocietalPerception "World-leading university" ;
+    :hasOutcome :Outcome_Oxford_Phil .
+
+:Content_Oxford_Phil rdf:type :Content ;
+    :hasDeliveryMethod "Research-based" ;
+    :hasContentFormat "Independent study" .
+
+:Outcome_Oxford_Phil rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Academic conferences" ;
+    :hasPersonalGrowth "Research expertise" ;
+    :hasImpactOnCareer "Academic positions" ;
+    :hasSkillDevelopment "Philosophical research" .
+
+# Instance 14: Animation Student at Gobelins
+:Animation_Student_14 rdf:type :Learner ;
+    rdfs:label "Animation Student"@en ;
+    :choosesEducationalPath :PaidSystem_Gobelins_2 ;
+    :hasLearningObjective "Animation mastery" ;
+    :hasDemographics :Demographics_Gobelins_14 .
+
+:Demographics_Gobelins_14 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "21" ;
+    :locatedIn "Paris" ;
+    :hasIncomeLevel "High" .
+
+:PaidSystem_Gobelins_2 rdf:type :PaidSystem ;
+    rdfs:label "Gobelins Animation School"@en ;
+    :isUsedBy :Animation_Student_14 ;
+    :deliversContent :Content_Gobelins_Anim ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "Premier animation school" ;
+    :hasOutcome :Outcome_Gobelins_Anim .
+
+:Content_Gobelins_Anim rdf:type :Content ;
+    :hasDeliveryMethod "Studio work" ;
+    :hasContentFormat "Creative projects" .
+
+:Outcome_Gobelins_Anim rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Animation festivals" ;
+    :hasPersonalGrowth "Artistic development" ;
+    :hasImpactOnCareer "Animation studio work" ;
+    :hasSkillDevelopment "Animation techniques" .
+
+# Instance 15: Sociology Researcher at University of Vienna
+:Sociology_Researcher_15 rdf:type :Learner ;
+    rdfs:label "Sociology Researcher"@en ;
+    :choosesEducationalPath :FreeSystem_Vienna ;
+    :hasLearningObjective "Social research" ;
+    :hasDemographics :Demographics_Vienna_15 .
+
+:Demographics_Vienna_15 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "32" ;
+    :locatedIn "Vienna" ;
+    :hasIncomeLevel "Medium" .
+
+:FreeSystem_Vienna rdf:type :FreeSystem ;
+    rdfs:label "Vienna Sociology Program"@en ;
+    :isUsedBy :Sociology_Researcher_15 ;
+    :deliversContent :Content_Vienna_Soc ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "Respected institution" ;
+    :hasOutcome :Outcome_Vienna_Soc .
+
+:Content_Vienna_Soc rdf:type :Content ;
+    :hasDeliveryMethod "Research-based" ;
+    :hasContentFormat "Academic study" .
+
+:Outcome_Vienna_Soc rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Research symposiums" ;
+    :hasPersonalGrowth "Research methodology" ;
+    :hasImpactOnCareer "Academic research" ;
+    :hasSkillDevelopment "Social research methods" .
+
+# Instance 16: UX Design Student at General Assembly
+:UX_Design_16 rdf:type :Learner ;
+    rdfs:label "UX Design Student"@en ;
+    :choosesEducationalPath :PaidSystem_GA_2 ;
+    :hasLearningObjective "UX design mastery" ;
+    :hasDemographics :Demographics_GA_16 .
+
+:Demographics_GA_16 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "25" ;
+    :locatedIn "New York" ;
+    :hasIncomeLevel "Medium" .
+
+:PaidSystem_GA_2 rdf:type :PaidSystem ;
+    rdfs:label "General Assembly UX Program"@en ;
+    :isUsedBy :UX_Design_16 ;
+    :deliversContent :Content_GA_UX_2 ;
+    :hasCredibility "Medium" ;
+    :hasSocietalPerception "Industry bootcamp" ;
+    :hasOutcome :Outcome_GA_UX_2 .
+
+:Content_GA_UX_2 rdf:type :Content ;
+    :hasDeliveryMethod "Bootcamp" ;
+    :hasContentFormat "Project-based" .
+
+:Outcome_GA_UX_2 rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Design meetups" ;
+    :hasPersonalGrowth "Design thinking" ;
+    :hasImpactOnCareer "UX designer roles" ;
+    :hasSkillDevelopment "User experience design" .
+
+# Instance 17: Master of Business Law at University of Sydney
+:Business_Law_17 rdf:type :Learner ;
+    rdfs:label "Business Law Master"@en ;
+    :choosesEducationalPath :PaidSystem_Sydney ;
+    :hasLearningObjective "Business law expertise" ;
+    :hasDemographics :Demographics_Sydney_17 .
+
+:Demographics_Sydney_17 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "27" ;
+    :locatedIn "Sydney" ;
+    :hasIncomeLevel "High" .
+
+:PaidSystem_Sydney rdf:type :PaidSystem ;
+    rdfs:label "Sydney Business Law Program"@en ;
+    :isUsedBy :Business_Law_17 ;
+    :deliversContent :Content_Sydney_Law ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "Leading law school" ;
+    :hasOutcome :Outcome_Sydney_Law .
+
+:Content_Sydney_Law rdf:type :Content ;
+    :hasDeliveryMethod "Traditional lectures" ;
+    :hasContentFormat "Academic study" .
+
+:Outcome_Sydney_Law rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Legal conferences" ;
+    :hasPersonalGrowth "Legal expertise" ;
+    :hasImpactOnCareer "Corporate law" ;
+    :hasSkillDevelopment "Business law practice" .
+
+# Instance 18: Biology Undergraduate at University of Helsinki
+:Biology_Undergrad_18 rdf:type :Learner ;
+    rdfs:label "Biology Undergraduate"@en ;
+    :choosesEducationalPath :FreeSystem_Helsinki_2 ;
+    :hasLearningObjective "Biology fundamentals" ;
+    :hasDemographics :Demographics_Helsinki_18 .
+
+:Demographics_Helsinki_18 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "21" ;
+    :locatedIn "Helsinki" ;
+    :hasIncomeLevel "Medium" .
+
+:FreeSystem_Helsinki_2 rdf:type :FreeSystem ;
+    rdfs:label "Helsinki Biology Program"@en ;
+    :isUsedBy :Biology_Undergrad_18 ;
+    :deliversContent :Content_Helsinki_Bio ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "Quality education" ;
+    :hasOutcome :Outcome_Helsinki_Bio .
+
+:Content_Helsinki_Bio rdf:type :Content ;
+    :hasDeliveryMethod "Lab work and lectures" ;
+    :hasContentFormat "Mixed learning" .
+
+:Outcome_Helsinki_Bio rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Research groups" ;
+    :hasPersonalGrowth "Scientific thinking" ;
+    :hasImpactOnCareer "Research positions" ;
+    :hasSkillDevelopment "Laboratory techniques" .
+
+# Instance 19: Hospitality Management at EHL
+:Hospitality_19 rdf:type :Learner ;
+    rdfs:label "Hospitality Management Student"@en ;
+    :choosesEducationalPath :PaidSystem_EHL ;
+    :hasLearningObjective "Hospitality excellence" ;
+    :hasDemographics :Demographics_EHL_19 .
+
+:Demographics_EHL_19 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "28" ;
+    :locatedIn "Lausanne" ;
+    :hasIncomeLevel "High" .
+
+:PaidSystem_EHL rdf:type :PaidSystem ;
+    rdfs:label "EHL Hospitality Program"@en ;
+    :isUsedBy :Hospitality_19 ;
+    :deliversContent :Content_EHL_Hosp ;
+    :hasCredibility "Very High" ;
+    :hasSocietalPerception "Top hospitality school" ;
+    :hasOutcome :Outcome_EHL_Hosp .
+
+:Content_EHL_Hosp rdf:type :Content ;
+    :hasDeliveryMethod "Practical training" ;
+    :hasContentFormat "Industry experience" .
+
+:Outcome_EHL_Hosp rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Industry events" ;
+    :hasPersonalGrowth "Management skills" ;
+    :hasImpactOnCareer "Hotel management" ;
+    :hasSkillDevelopment "Hospitality operations" .
+
+# Instance 20: Robotics Engineering at Tokyo Tech
+:Robotics_20 rdf:type :Learner ;
+    rdfs:label "Robotics Engineering Student"@en ;
+    :choosesEducationalPath :FreeSystem_TokyoTech ;
+    :hasLearningObjective "Robotics mastery" ;
+    :hasDemographics :Demographics_TokyoTech_20 .
+
+:Demographics_TokyoTech_20 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "25" ;
+    :locatedIn "Tokyo" ;
+    :hasIncomeLevel "Medium" .
+
+:FreeSystem_TokyoTech rdf:type :FreeSystem ;
+    rdfs:label "Tokyo Tech Robotics Program"@en ;
+    :isUsedBy :Robotics_20 ;
+    :deliversContent :Content_TokyoTech_Rob ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "Leading tech university" ;
+    :hasOutcome :Outcome_TokyoTech_Rob .
+
+:Content_TokyoTech_Rob rdf:type :Content ;
+    :hasDeliveryMethod "Lab research" ;
+    :hasContentFormat "Technical training" .
+
+:Outcome_TokyoTech_Rob rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Robotics conferences" ;
+    :hasPersonalGrowth "Technical expertise" ;
+    :hasImpactOnCareer "Robotics engineering" ;
+    :hasSkillDevelopment "Robotics development" .
+
+# Instance 21: Interior Design at Parsons
+:Interior_Design_21 rdf:type :Learner ;
+    rdfs:label "Interior Design Student"@en ;
+    :choosesEducationalPath :PaidSystem_Parsons ;
+    :hasLearningObjective "Interior design mastery" ;
+    :hasDemographics :Demographics_Parsons_21 .
+
+:Demographics_Parsons_21 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "22" ;
+    :locatedIn "New York" ;
+    :hasIncomeLevel "High" .
+
+:PaidSystem_Parsons rdf:type :PaidSystem ;
+    rdfs:label "Parsons Interior Design"@en ;
+    :isUsedBy :Interior_Design_21 ;
+    :deliversContent :Content_Parsons_Design ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "Premier design school" ;
+    :hasOutcome :Outcome_Parsons_Design .
+
+:Content_Parsons_Design rdf:type :Content ;
+    :hasDeliveryMethod "Studio work" ;
+    :hasContentFormat "Project-based" .
+
+:Outcome_Parsons_Design rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Design shows" ;
+    :hasPersonalGrowth "Creative development" ;
+    :hasImpactOnCareer "Interior design firms" ;
+    :hasSkillDevelopment "Spatial design" .
+
+# Instance 22: Renewable Energy at TU Delft
+:Renewable_Energy_22 rdf:type :Learner ;
+    rdfs:label "Renewable Energy Student"@en ;
+    :choosesEducationalPath :FreeSystem_TUDelft ;
+    :hasLearningObjective "Sustainable energy" ;
+    :hasDemographics :Demographics_TUDelft_22 .
+
+:Demographics_TUDelft_22 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "26" ;
+    :locatedIn "Delft" ;
+    :hasIncomeLevel "Medium" .
+
+:FreeSystem_TUDelft rdf:type :FreeSystem ;
+    rdfs:label "TU Delft Energy Program"@en ;
+    :isUsedBy :Renewable_Energy_22 ;
+    :deliversContent :Content_TUDelft_Energy ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "Technical excellence" ;
+    :hasOutcome :Outcome_TUDelft_Energy .
+
+:Content_TUDelft_Energy rdf:type :Content ;
+    :hasDeliveryMethod "Research-based" ;
+    :hasContentFormat "Technical study" .
+
+:Outcome_TUDelft_Energy rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Energy conferences" ;
+    :hasPersonalGrowth "Sustainability focus" ;
+    :hasImpactOnCareer "Energy sector" ;
+    :hasSkillDevelopment "Renewable technologies" .
+
+# Instance 23: Medical Research at Johns Hopkins
+:Medical_Research_23 rdf:type :Learner ;
+    rdfs:label "Medical Researcher"@en ;
+    :choosesEducationalPath :PaidSystem_JohnsHopkins ;
+    :hasLearningObjective "Medical research" ;
+    :hasDemographics :Demographics_JH_23 .
+
+:Demographics_JH_23 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "29" ;
+    :locatedIn "Baltimore" ;
+    :hasIncomeLevel "High" .
+
+:PaidSystem_JohnsHopkins rdf:type :PaidSystem ;
+    rdfs:label "Johns Hopkins Medicine"@en ;
+    :isUsedBy :Medical_Research_23 ;
+    :deliversContent :Content_JH_Medicine ;
+    :hasCredibility "Very High" ;
+    :hasSocietalPerception "Medical excellence" ;
+    :hasOutcome :Outcome_JH_Medicine .
+
+:Content_JH_Medicine rdf:type :Content ;
+    :hasDeliveryMethod "Research-based" ;
+    :hasContentFormat "Clinical research" .
+
+:Outcome_JH_Medicine rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Medical symposiums" ;
+    :hasPersonalGrowth "Research expertise" ;
+    :hasImpactOnCareer "Medical research" ;
+    :hasSkillDevelopment "Clinical research" .
+
+# Instance 24: Civil Engineering at NUS
+:Civil_Engineering_24 rdf:type :Learner ;
+    rdfs:label "Civil Engineering Student"@en ;
+    :choosesEducationalPath :FreeSystem_NUS ;
+    :hasLearningObjective "Civil engineering" ;
+    :hasDemographics :Demographics_NUS_24 .
+
+:Demographics_NUS_24 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "24" ;
+    :locatedIn "Singapore" ;
+    :hasIncomeLevel "Medium" .
+
+:FreeSystem_NUS rdf:type :FreeSystem ;
+    rdfs:label "NUS Engineering Program"@en ;
+    :isUsedBy :Civil_Engineering_24 ;
+    :deliversContent :Content_NUS_Civil ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "Engineering excellence" ;
+    :hasOutcome :Outcome_NUS_Civil .
+
+:Content_NUS_Civil rdf:type :Content ;
+    :hasDeliveryMethod "Technical training" ;
+    :hasContentFormat "Engineering practice" .
+
+:Outcome_NUS_Civil rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Engineering forums" ;
+    :hasPersonalGrowth "Technical skills" ;
+    :hasImpactOnCareer "Civil engineering" ;
+    :hasSkillDevelopment "Infrastructure design" .
+
+# Instance 25: Cybersecurity at MIT
+:Cybersecurity_25 rdf:type :Learner ;
+    rdfs:label "Cybersecurity Specialist"@en ;
+    :choosesEducationalPath :PaidSystem_MIT ;
+    :hasLearningObjective "Cybersecurity mastery" ;
+    :hasDemographics :Demographics_MIT_25 .
+
+:Demographics_MIT_25 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "27" ;
+    :locatedIn "Boston" ;
+    :hasIncomeLevel "High" .
+
+:PaidSystem_MIT rdf:type :PaidSystem ;
+    rdfs:label "MIT Cybersecurity Program"@en ;
+    :isUsedBy :Cybersecurity_25 ;
+    :deliversContent :Content_MIT_Cyber ;
+    :hasCredibility "Very High" ;
+    :hasSocietalPerception "Tech leadership" ;
+    :hasOutcome :Outcome_MIT_Cyber .
+
+:Content_MIT_Cyber rdf:type :Content ;
+    :hasDeliveryMethod "Technical training" ;
+    :hasContentFormat "Security practice" .
+
+:Outcome_MIT_Cyber rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Security conferences" ;
+    :hasPersonalGrowth "Security expertise" ;
+    :hasImpactOnCareer "Security specialist" ;
+    :hasSkillDevelopment "Cybersecurity tools" .
+
+# Instance 26: Graphic Design at University of Glasgow
+:Graphic_Design_26 rdf:type :Learner ;
+    rdfs:label "Graphic Design Student"@en ;
+    :choosesEducationalPath :FreeSystem_Glasgow ;
+    :hasLearningObjective "Design fundamentals" ;
+    :hasDemographics :Demographics_Glasgow_26 .
+
+:Demographics_Glasgow_26 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "22" ;
+    :locatedIn "Glasgow" ;
+    :hasIncomeLevel "Low" .
+
+:FreeSystem_Glasgow rdf:type :FreeSystem ;
+    rdfs:label "Glasgow Design Program"@en ;
+    :isUsedBy :Graphic_Design_26 ;
+    :deliversContent :Content_Glasgow_Design ;
+    :hasCredibility "Medium" ;
+    :hasSocietalPerception "Regional art school" ;
+    :hasOutcome :Outcome_Glasgow_Design .
+
+:Content_Glasgow_Design rdf:type :Content ;
+    :hasDeliveryMethod "Studio work" ;
+    :hasContentFormat "Creative projects" .
+
+:Outcome_Glasgow_Design rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Design exhibitions" ;
+    :hasPersonalGrowth "Creative skills" ;
+    :hasImpactOnCareer "Design industry" ;
+    :hasSkillDevelopment "Visual design" .
+
+# Instance 27: Aviation Management at Embry-Riddle
+:Aviation_Management_27 rdf:type :Learner ;
+    rdfs:label "Aviation Manager"@en ;
+    :choosesEducationalPath :PaidSystem_EmbryRiddle ;
+    :hasLearningObjective "Aviation leadership" ;
+    :hasDemographics :Demographics_EmbryRiddle_27 .
+
+:Demographics_EmbryRiddle_27 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "28" ;
+    :locatedIn "Florida" ;
+    :hasIncomeLevel "High" .
+
+:PaidSystem_EmbryRiddle rdf:type :PaidSystem ;
+    rdfs:label "Embry-Riddle Aviation"@en ;
+    :isUsedBy :Aviation_Management_27 ;
+    :deliversContent :Content_EmbryRiddle_Aviation ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "Aviation leader" ;
+    :hasOutcome :Outcome_EmbryRiddle_Aviation .
+
+:Content_EmbryRiddle_Aviation rdf:type :Content ;
+    :hasDeliveryMethod "Mixed learning" ;
+    :hasContentFormat "Theory and practice" .
+
+:Outcome_EmbryRiddle_Aviation rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Aviation industry events" ;
+    :hasPersonalGrowth "Leadership skills" ;
+    :hasImpactOnCareer "Airline management" ;
+    :hasSkillDevelopment "Aviation operations" .
+
+# Instance 28: Teacher Training at Cape Town University
+:Teacher_Training_28 rdf:type :Learner ;
+    rdfs:label "Teacher Trainee"@en ;
+    :choosesEducationalPath :FreeSystem_CapeTown ;
+    :hasLearningObjective "Teaching methods" ;
+    :hasDemographics :Demographics_CapeTown_28 .
+
+:Demographics_CapeTown_28 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "26" ;
+    :locatedIn "Cape Town" ;
+    :hasIncomeLevel "Medium" .
+
+:FreeSystem_CapeTown rdf:type :FreeSystem ;
+    rdfs:label "Cape Town Education"@en ;
+    :isUsedBy :Teacher_Training_28 ;
+    :deliversContent :Content_CapeTown_Teaching ;
+    :hasCredibility "Medium" ;
+    :hasSocietalPerception "Regional institution" ;
+    :hasOutcome :Outcome_CapeTown_Teaching .
+
+:Content_CapeTown_Teaching rdf:type :Content ;
+    :hasDeliveryMethod "Classroom practice" ;
+    :hasContentFormat "Practical training" .
+
+:Outcome_CapeTown_Teaching rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Education conferences" ;
+    :hasPersonalGrowth "Teaching skills" ;
+    :hasImpactOnCareer "Teaching positions" ;
+    :hasSkillDevelopment "Pedagogical methods" .
+
+# Instance 29: Cloud Engineering at Microsoft Azure Academy
+:Cloud_Engineer_29 rdf:type :Learner ;
+    rdfs:label "Cloud Engineer"@en ;
+    :choosesEducationalPath :PaidSystem_Azure ;
+    :hasLearningObjective "Cloud computing" ;
+    :hasDemographics :Demographics_Azure_29 .
+
+:Demographics_Azure_29 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "25" ;
+    :locatedIn "Berlin" ;
+    :hasIncomeLevel "Medium" .
+
+:PaidSystem_Azure rdf:type :PaidSystem ;
+    rdfs:label "Azure Cloud Academy"@en ;
+    :isUsedBy :Cloud_Engineer_29 ;
+    :deliversContent :Content_Azure_Cloud ;
+    :hasCredibility "Medium" ;
+    :hasSocietalPerception "Industry certification" ;
+    :hasOutcome :Outcome_Azure_Cloud .
+
+:Content_Azure_Cloud rdf:type :Content ;
+    :hasDeliveryMethod "Online learning" ;
+    :hasContentFormat "Technical training" .
+
+:Outcome_Azure_Cloud rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Tech community" ;
+    :hasPersonalGrowth "Cloud expertise" ;
+    :hasImpactOnCareer "Cloud architecture" ;
+    :hasSkillDevelopment "Cloud platforms" .
+
+# Instance 30: Chemistry Graduate at University of Zurich
+:Chemistry_Graduate_30 rdf:type :Learner ;
+    rdfs:label "Chemistry Student"@en ;
+    :choosesEducationalPath :FreeSystem_Zurich ;
+    :hasLearningObjective "Chemical analysis" ;
+    :hasDemographics :Demographics_Zurich_30 .
+
+:Demographics_Zurich_30 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "23" ;
+    :locatedIn "Zurich" ;
+    :hasIncomeLevel "Low" .
+
+:FreeSystem_Zurich rdf:type :FreeSystem ;
+    rdfs:label "Zurich Chemistry"@en ;
+    :isUsedBy :Chemistry_Graduate_30 ;
+    :deliversContent :Content_Zurich_Chem ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "Research excellence" ;
+    :hasOutcome :Outcome_Zurich_Chem .
+
+:Content_Zurich_Chem rdf:type :Content ;
+    :hasDeliveryMethod "Laboratory work" ;
+    :hasContentFormat "Research-based" .
+
+:Outcome_Zurich_Chem rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Chemistry symposiums" ;
+    :hasPersonalGrowth "Research skills" ;
+    :hasImpactOnCareer "Chemical research" ;
+    :hasSkillDevelopment "Analytical methods" .
+
+# Instance 31: Animation Arts at Vancouver Film School
+:Animation_Arts_31 rdf:type :Learner ;
+    rdfs:label "Animation Artist"@en ;
+    :choosesEducationalPath :PaidSystem_VFS ;
+    :hasLearningObjective "Animation arts" ;
+    :hasDemographics :Demographics_VFS_31 .
+
+:Demographics_VFS_31 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "21" ;
+    :locatedIn "Vancouver" ;
+    :hasIncomeLevel "High" .
+
+:PaidSystem_VFS rdf:type :PaidSystem ;
+    rdfs:label "Vancouver Film School"@en ;
+    :isUsedBy :Animation_Arts_31 ;
+    :deliversContent :Content_VFS_Animation ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "Creative excellence" ;
+    :hasOutcome :Outcome_VFS_Animation .
+
+:Content_VFS_Animation rdf:type :Content ;
+    :hasDeliveryMethod "Studio practice" ;
+    :hasContentFormat "Creative projects" .
+
+:Outcome_VFS_Animation rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Animation festivals" ;
+    :hasPersonalGrowth "Artistic skills" ;
+    :hasImpactOnCareer "Animation industry" ;
+    :hasSkillDevelopment "Animation techniques" .
+
+# Instance 32: Political Science at University of Edinburgh
+:Political_Science_32 rdf:type :Learner ;
+    rdfs:label "Political Science Student"@en ;
+    :choosesEducationalPath :FreeSystem_Edinburgh ;
+    :hasLearningObjective "Political analysis" ;
+    :hasDemographics :Demographics_Edinburgh_32 .
+
+:Demographics_Edinburgh_32 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "24" ;
+    :locatedIn "Edinburgh" ;
+    :hasIncomeLevel "Medium" .
+
+:FreeSystem_Edinburgh rdf:type :FreeSystem ;
+    rdfs:label "Edinburgh Politics"@en ;
+    :isUsedBy :Political_Science_32 ;
+    :deliversContent :Content_Edinburgh_Politics ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "Academic excellence" ;
+    :hasOutcome :Outcome_Edinburgh_Politics .
+
+:Content_Edinburgh_Politics rdf:type :Content ;
+    :hasDeliveryMethod "Academic study" ;
+    :hasContentFormat "Research-based" .
+
+:Outcome_Edinburgh_Politics rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Political forums" ;
+    :hasPersonalGrowth "Analytical skills" ;
+    :hasImpactOnCareer "Policy analysis" ;
+    :hasSkillDevelopment "Political research" .
+
+# Instance 33: Entrepreneurship at Babson College
+:Entrepreneurship_33 rdf:type :Learner ;
+    rdfs:label "Entrepreneurship Student"@en ;
+    :choosesEducationalPath :PaidSystem_Babson ;
+    :hasLearningObjective "Business creation" ;
+    :hasDemographics :Demographics_Babson_33 .
+
+:Demographics_Babson_33 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "29" ;
+    :locatedIn "Boston" ;
+    :hasIncomeLevel "High" .
+
+:PaidSystem_Babson rdf:type :PaidSystem ;
+    rdfs:label "Babson Entrepreneurship"@en ;
+    :isUsedBy :Entrepreneurship_33 ;
+    :deliversContent :Content_Babson_Entre ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "Business leadership" ;
+    :hasOutcome :Outcome_Babson_Entre .
+
+:Content_Babson_Entre rdf:type :Content ;
+    :hasDeliveryMethod "Case studies" ;
+    :hasContentFormat "Practical business" .
+
+:Outcome_Babson_Entre rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Startup events" ;
+    :hasPersonalGrowth "Business acumen" ;
+    :hasImpactOnCareer "Business ownership" ;
+    :hasSkillDevelopment "Entrepreneurial skills" .
+
+# Instance 34: History Research at Oxford
+:History_Research_34 rdf:type :Learner ;
+    rdfs:label "History Researcher"@en ;
+    :choosesEducationalPath :FreeSystem_Oxford_2 ;
+    :hasLearningObjective "Historical research" ;
+    :hasDemographics :Demographics_Oxford_34 .
+
+:Demographics_Oxford_34 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "32" ;
+    :locatedIn "Oxford" ;
+    :hasIncomeLevel "Medium" .
+
+:FreeSystem_Oxford_2 rdf:type :FreeSystem ;
+    rdfs:label "Oxford History"@en ;
+    :isUsedBy :History_Research_34 ;
+    :deliversContent :Content_Oxford_History ;
+    :hasCredibility "Very High" ;
+    :hasSocietalPerception "Academic excellence" ;
+    :hasOutcome :Outcome_Oxford_History .
+
+:Content_Oxford_History rdf:type :Content ;
+    :hasDeliveryMethod "Research-based" ;
+    :hasContentFormat "Historical study" .
+
+:Outcome_Oxford_History rdf:type :Outcome ;
+    :hasNetworkingOpportunities "History conferences" ;
+    :hasPersonalGrowth "Research expertise" ;
+    :hasImpactOnCareer "Academic history" ;
+    :hasSkillDevelopment "Historical methods" .
+
+# Instance 35: Full-Stack Web Development at Coursera
+:Web_Development_35 rdf:type :Learner ;
+    rdfs:label "Web Developer"@en ;
+    :choosesEducationalPath :PaidSystem_Coursera ;
+    :hasLearningObjective "Web development" ;
+    :hasDemographics :Demographics_Coursera_35 .
+
+:Demographics_Coursera_35 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "24" ;
+    :locatedIn "Madrid" ;
+    :hasIncomeLevel "Medium" .
+
+:PaidSystem_Coursera rdf:type :PaidSystem ;
+    rdfs:label "Coursera Web Dev"@en ;
+    :isUsedBy :Web_Development_35 ;
+    :deliversContent :Content_Coursera_WebDev ;
+    :hasCredibility "Medium" ;
+    :hasSocietalPerception "Online learning" ;
+    :hasOutcome :Outcome_Coursera_WebDev .
+
+:Content_Coursera_WebDev rdf:type :Content ;
+    :hasDeliveryMethod "Online learning" ;
+    :hasContentFormat "Interactive coding" .
+
+:Outcome_Coursera_WebDev rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Online community" ;
+    :hasPersonalGrowth "Technical skills" ;
+    :hasImpactOnCareer "Web development" ;
+    :hasSkillDevelopment "Full-stack coding" .
+
+# Instance 36: Environmental Science at UC Berkeley
+:Environmental_Science_36 rdf:type :Learner ;
+    rdfs:label "Environmental Scientist"@en ;
+    :choosesEducationalPath :FreeSystem_Berkeley ;
+    :hasLearningObjective "Environmental studies" ;
+    :hasDemographics :Demographics_Berkeley_36 .
+
+:Demographics_Berkeley_36 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "26" ;
+    :locatedIn "California" ;
+    :hasIncomeLevel "Medium" .
+
+:FreeSystem_Berkeley rdf:type :FreeSystem ;
+    rdfs:label "Berkeley Environmental Studies"@en ;
+    :isUsedBy :Environmental_Science_36 ;
+    :deliversContent :Content_Berkeley_Env ;
+    :hasCredibility "Very High" ;
+    :hasSocietalPerception "Research excellence" ;
+    :hasOutcome :Outcome_Berkeley_Env .
+
+:Content_Berkeley_Env rdf:type :Content ;
+    :hasDeliveryMethod "Field research" ;
+    :hasContentFormat "Research-based" .
+
+:Outcome_Berkeley_Env rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Environmental forums" ;
+    :hasPersonalGrowth "Research expertise" ;
+    :hasImpactOnCareer "Environmental science" ;
+    :hasSkillDevelopment "Environmental analysis" .
+
+# Instance 37: Game Design at SCAD
+:Game_Design_37 rdf:type :Learner ;
+    rdfs:label "Game Design Student"@en ;
+    :choosesEducationalPath :PaidSystem_SCAD ;
+    :hasLearningObjective "Game development" ;
+    :hasDemographics :Demographics_SCAD_37 .
+
+:Demographics_SCAD_37 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "23" ;
+    :locatedIn "Savannah" ;
+    :hasIncomeLevel "High" .
+
+:PaidSystem_SCAD rdf:type :PaidSystem ;
+    rdfs:label "SCAD Game Design"@en ;
+    :isUsedBy :Game_Design_37 ;
+    :deliversContent :Content_SCAD_Game ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "Creative excellence" ;
+    :hasOutcome :Outcome_SCAD_Game .
+
+:Content_SCAD_Game rdf:type :Content ;
+    :hasDeliveryMethod "Studio practice" ;
+    :hasContentFormat "Interactive projects" .
+
+:Outcome_SCAD_Game rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Gaming events" ;
+    :hasPersonalGrowth "Creative skills" ;
+    :hasImpactOnCareer "Game industry" ;
+    :hasSkillDevelopment "Game development" .
+
+# Instance 38: Agricultural Sciences at Wageningen
+:Agricultural_Sciences_38 rdf:type :Learner ;
+    rdfs:label "Agricultural Scientist"@en ;
+    :choosesEducationalPath :FreeSystem_Wageningen ;
+    :hasLearningObjective "Agricultural research" ;
+    :hasDemographics :Demographics_Wageningen_38 .
+
+:Demographics_Wageningen_38 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "24" ;
+    :locatedIn "Wageningen" ;
+    :hasIncomeLevel "Medium" .
+
+:FreeSystem_Wageningen rdf:type :FreeSystem ;
+    rdfs:label "Wageningen Agriculture"@en ;
+    :isUsedBy :Agricultural_Sciences_38 ;
+    :deliversContent :Content_Wageningen_Agri ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "Agricultural leader" ;
+    :hasOutcome :Outcome_Wageningen_Agri .
+
+:Content_Wageningen_Agri rdf:type :Content ;
+    :hasDeliveryMethod "Field research" ;
+    :hasContentFormat "Practical study" .
+
+:Outcome_Wageningen_Agri rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Agricultural conferences" ;
+    :hasPersonalGrowth "Research skills" ;
+    :hasImpactOnCareer "Agricultural science" ;
+    :hasSkillDevelopment "Agricultural methods" .
+
+# Instance 39: Luxury Brand Management at ESSEC
+:Luxury_Management_39 rdf:type :Learner ;
+    rdfs:label "Luxury Brand Manager"@en ;
+    :choosesEducationalPath :PaidSystem_ESSEC ;
+    :hasLearningObjective "Luxury management" ;
+    :hasDemographics :Demographics_ESSEC_39 .
+
+:Demographics_ESSEC_39 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "28" ;
+    :locatedIn "Paris" ;
+    :hasIncomeLevel "High" .
+
+:PaidSystem_ESSEC rdf:type :PaidSystem ;
+    rdfs:label "ESSEC Luxury Management"@en ;
+    :isUsedBy :Luxury_Management_39 ;
+    :deliversContent :Content_ESSEC_Luxury ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "Industry leader" ;
+    :hasOutcome :Outcome_ESSEC_Luxury .
+
+:Content_ESSEC_Luxury rdf:type :Content ;
+    :hasDeliveryMethod "Case studies" ;
+    :hasContentFormat "Industry practice" .
+
+:Outcome_ESSEC_Luxury rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Luxury industry events" ;
+    :hasPersonalGrowth "Management skills" ;
+    :hasImpactOnCareer "Luxury sector" ;
+    :hasSkillDevelopment "Brand management" .
+
+# Instance 40: Computer Science at Stanford
+:Computer_Science_40 rdf:type :Learner ;
+    rdfs:label "Computer Science Student"@en ;
+    :choosesEducationalPath :PaidSystem_Stanford_CS ;
+    :hasLearningObjective "Computer science" ;
+    :hasDemographics :Demographics_Stanford_40 .
+
+:Demographics_Stanford_40 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "24" ;
+    :locatedIn "California" ;
+    :hasIncomeLevel "High" .
+
+:PaidSystem_Stanford_CS rdf:type :PaidSystem ;
+    rdfs:label "Stanford Computer Science"@en ;
+    :isUsedBy :Computer_Science_40 ;
+    :deliversContent :Content_Stanford_CS ;
+    :hasCredibility "Very High" ;
+    :hasSocietalPerception "Tech excellence" ;
+    :hasOutcome :Outcome_Stanford_CS .
+
+:Content_Stanford_CS rdf:type :Content ;
+    :hasDeliveryMethod "Technical study" ;
+    :hasContentFormat "Programming practice" .
+
+:Outcome_Stanford_CS rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Tech conferences" ;
+    :hasPersonalGrowth "Technical expertise" ;
+    :hasImpactOnCareer "Tech industry" ;
+    :hasSkillDevelopment "Computer science" .
+
+# Instance 41: Physics Master's at University of Copenhagen
+:Physics_Masters_41 rdf:type :Learner ;
+    rdfs:label "Physics Student"@en ;
+    :choosesEducationalPath :FreeSystem_Copenhagen ;
+    :hasLearningObjective "Physics research" ;
+    :hasDemographics :Demographics_Copenhagen_41 .
+
+:Demographics_Copenhagen_41 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "26" ;
+    :locatedIn "Copenhagen" ;
+    :hasIncomeLevel "High" .
+
+:FreeSystem_Copenhagen rdf:type :FreeSystem ;
+    rdfs:label "Copenhagen Physics"@en ;
+    :isUsedBy :Physics_Masters_41 ;
+    :deliversContent :Content_Copenhagen_Physics ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "Research excellence" ;
+    :hasOutcome :Outcome_Copenhagen_Physics .
+
+:Content_Copenhagen_Physics rdf:type :Content ;
+    :hasDeliveryMethod "Laboratory research" ;
+    :hasContentFormat "Theoretical study" .
+
+:Outcome_Copenhagen_Physics rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Physics symposiums" ;
+    :hasPersonalGrowth "Research skills" ;
+    :hasImpactOnCareer "Physics research" ;
+    :hasSkillDevelopment "Physics methods" .
+
+# Instance 42: Data Analysis at edX
+:Data_Analysis_42 rdf:type :Learner ;
+    rdfs:label "Data Analyst"@en ;
+    :choosesEducationalPath :FreeSystem_edX ;
+    :hasLearningObjective "Data analysis" ;
+    :hasDemographics :Demographics_edX_42 .
+
+:Demographics_edX_42 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "28" ;
+    :locatedIn "Berlin" ;
+    :hasIncomeLevel "Medium" .
+
+:FreeSystem_edX rdf:type :FreeSystem ;
+    rdfs:label "edX Data Analysis"@en ;
+    :isUsedBy :Data_Analysis_42 ;
+    :deliversContent :Content_edX_Data ;
+    :hasCredibility "Medium" ;
+    :hasSocietalPerception "Online learning" ;
+    :hasOutcome :Outcome_edX_Data .
+
+:Content_edX_Data rdf:type :Content ;
+    :hasDeliveryMethod "Online learning" ;
+    :hasContentFormat "Interactive practice" .
+
+:Outcome_edX_Data rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Online forums" ;
+    :hasPersonalGrowth "Analytical skills" ;
+    :hasImpactOnCareer "Data analysis" ;
+    :hasSkillDevelopment "Data tools" .
+
+# Instance 43: Law Graduate at Yale Law School
+:Law_Graduate_43 rdf:type :Learner ;
+    rdfs:label "Law Student"@en ;
+    :choosesEducationalPath :PaidSystem_Yale ;
+    :hasLearningObjective "Legal studies" ;
+    :hasDemographics :Demographics_Yale_43 .
+
+:Demographics_Yale_43 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "27" ;
+    :locatedIn "New Haven" ;
+    :hasIncomeLevel "High" .
+
+:PaidSystem_Yale rdf:type :PaidSystem ;
+    rdfs:label "Yale Law School"@en ;
+    :isUsedBy :Law_Graduate_43 ;
+    :deliversContent :Content_Yale_Law ;
+    :hasCredibility "Very High" ;
+    :hasSocietalPerception "Legal excellence" ;
+    :hasOutcome :Outcome_Yale_Law .
+
+:Content_Yale_Law rdf:type :Content ;
+    :hasDeliveryMethod "Case study" ;
+    :hasContentFormat "Legal practice" .
+
+:Outcome_Yale_Law rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Legal conferences" ;
+    :hasPersonalGrowth "Legal expertise" ;
+    :hasImpactOnCareer "Legal practice" ;
+    :hasSkillDevelopment "Legal methods" .
+
+# Instance 44: Electrician at French Trade School
+:Electrician_44 rdf:type :Learner ;
+    rdfs:label "Electrician Apprentice"@en ;
+    :choosesEducationalPath :FreeSystem_FrenchTrade ;
+    :hasLearningObjective "Electrical trade" ;
+    :hasDemographics :Demographics_FrenchTrade_44 .
+
+:Demographics_FrenchTrade_44 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "21" ;
+    :locatedIn "Paris" ;
+    :hasIncomeLevel "Medium" .
+
+:FreeSystem_FrenchTrade rdf:type :FreeSystem ;
+    rdfs:label "French Trade School"@en ;
+    :isUsedBy :Electrician_44 ;
+    :deliversContent :Content_FrenchTrade_Elec ;
+    :hasCredibility "Medium" ;
+    :hasSocietalPerception "Vocational training" ;
+    :hasOutcome :Outcome_FrenchTrade_Elec .
+
+:Content_FrenchTrade_Elec rdf:type :Content ;
+    :hasDeliveryMethod "Practical training" ;
+    :hasContentFormat "Hands-on learning" .
+
+:Outcome_FrenchTrade_Elec rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Trade unions" ;
+    :hasPersonalGrowth "Technical skills" ;
+    :hasImpactOnCareer "Electrical work" ;
+    :hasSkillDevelopment "Electrical systems" .
+
+# Instance 45: IB Diploma at UWC Atlantic
+:IB_Student_45 rdf:type :Learner ;
+    rdfs:label "IB Diploma Student"@en ;
+    :choosesEducationalPath :PaidSystem_UWC ;
+    :hasLearningObjective "International education" ;
+    :hasDemographics :Demographics_UWC_45 .
+
+:Demographics_UWC_45 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "17" ;
+    :locatedIn "Wales" ;
+    :hasIncomeLevel "High" .
+
+:PaidSystem_UWC rdf:type :PaidSystem ;
+    rdfs:label "UWC Atlantic College"@en ;
+    :isUsedBy :IB_Student_45 ;
+    :deliversContent :Content_UWC_IB ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "International excellence" ;
+    :hasOutcome :Outcome_UWC_IB .
+
+:Content_UWC_IB rdf:type :Content ;
+    :hasDeliveryMethod "International curriculum" ;
+    :hasContentFormat "Mixed learning" .
+
+:Outcome_UWC_IB rdf:type :Outcome ;
+    :hasNetworkingOpportunities "International community" ;
+    :hasPersonalGrowth "Global perspective" ;
+    :hasImpactOnCareer "University preparation" ;
+    :hasSkillDevelopment "Academic skills" .
+
+# Instance 46: Biology PhD at University of Zurich
+:Biology_PhD_46 rdf:type :Learner ;
+    rdfs:label "Biology PhD Student"@en ;
+    :choosesEducationalPath :FreeSystem_Zurich_2 ;
+    :hasLearningObjective "Biological research" ;
+    :hasDemographics :Demographics_Zurich_46 .
+
+:Demographics_Zurich_46 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "32" ;
+    :locatedIn "Zurich" ;
+    :hasIncomeLevel "High" .
+
+:FreeSystem_Zurich_2 rdf:type :FreeSystem ;
+    rdfs:label "Zurich Biology PhD"@en ;
+    :isUsedBy :Biology_PhD_46 ;
+    :deliversContent :Content_Zurich_Bio ;
+    :hasCredibility "Very High" ;
+    :hasSocietalPerception "Research excellence" ;
+    :hasOutcome :Outcome_Zurich_Bio .
+
+:Content_Zurich_Bio rdf:type :Content ;
+    :hasDeliveryMethod "Research-based" ;
+    :hasContentFormat "Laboratory work" .
+
+:Outcome_Zurich_Bio rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Research conferences" ;
+    :hasPersonalGrowth "Research expertise" ;
+    :hasImpactOnCareer "Academic research" ;
+    :hasSkillDevelopment "Research methods" .
+
+# Instance 47: Front-End Development at Udacity
+:Frontend_Dev_47 rdf:type :Learner ;
+    rdfs:label "Front-End Developer"@en ;
+    :choosesEducationalPath :PaidSystem_Udacity_2 ;
+    :hasLearningObjective "Front-end development" ;
+    :hasDemographics :Demographics_Udacity_47 .
+
+:Demographics_Udacity_47 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "24" ;
+    :locatedIn "Madrid" ;
+    :hasIncomeLevel "Medium" .
+
+:PaidSystem_Udacity_2 rdf:type :PaidSystem ;
+    rdfs:label "Udacity Front-End Program"@en ;
+    :isUsedBy :Frontend_Dev_47 ;
+    :deliversContent :Content_Udacity_Frontend ;
+    :hasCredibility "Medium" ;
+    :hasSocietalPerception "Tech education" ;
+    :hasOutcome :Outcome_Udacity_Frontend .
+
+:Content_Udacity_Frontend rdf:type :Content ;
+    :hasDeliveryMethod "Online learning" ;
+    :hasContentFormat "Interactive coding" .
+
+:Outcome_Udacity_Frontend rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Online community" ;
+    :hasPersonalGrowth "Technical skills" ;
+    :hasImpactOnCareer "Web development" ;
+    :hasSkillDevelopment "Front-end technologies" .
+
+# Instance 48: Science High School at Helsinki
+:Science_HighSchool_48 rdf:type :Learner ;
+    rdfs:label "Science Student"@en ;
+    :choosesEducationalPath :FreeSystem_Helsinki_HS ;
+    :hasLearningObjective "Science basics" ;
+    :hasDemographics :Demographics_Helsinki_48 .
+
+:Demographics_Helsinki_48 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "18" ;
+    :locatedIn "Helsinki" ;
+    :hasIncomeLevel "Low" .
+
+:FreeSystem_Helsinki_HS rdf:type :FreeSystem ;
+    rdfs:label "Helsinki High School"@en ;
+    :isUsedBy :Science_HighSchool_48 ;
+    :deliversContent :Content_Helsinki_Science ;
+    :hasCredibility "Medium" ;
+    :hasSocietalPerception "Quality education" ;
+    :hasOutcome :Outcome_Helsinki_Science .
+
+:Content_Helsinki_Science rdf:type :Content ;
+    :hasDeliveryMethod "Classroom learning" ;
+    :hasContentFormat "Mixed format" .
+
+:Outcome_Helsinki_Science rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Science clubs" ;
+    :hasPersonalGrowth "Academic foundation" ;
+    :hasImpactOnCareer "University preparation" ;
+    :hasSkillDevelopment "Scientific basics" .
+
+# Instance 49: Fine Arts at Royal College of Art
+:Fine_Arts_49 rdf:type :Learner ;
+    rdfs:label "Fine Arts Student"@en ;
+    :choosesEducationalPath :PaidSystem_RCA ;
+    :hasLearningObjective "Fine arts mastery" ;
+    :hasDemographics :Demographics_RCA_49 .
+
+:Demographics_RCA_49 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "22" ;
+    :locatedIn "London" ;
+    :hasIncomeLevel "Medium" .
+
+:PaidSystem_RCA rdf:type :PaidSystem ;
+    rdfs:label "Royal College of Art"@en ;
+    :isUsedBy :Fine_Arts_49 ;
+    :deliversContent :Content_RCA_Arts ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "Artistic excellence" ;
+    :hasOutcome :Outcome_RCA_Arts .
+
+:Content_RCA_Arts rdf:type :Content ;
+    :hasDeliveryMethod "Studio practice" ;
+    :hasContentFormat "Creative work" .
+
+:Outcome_RCA_Arts rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Art exhibitions" ;
+    :hasPersonalGrowth "Artistic development" ;
+    :hasImpactOnCareer "Professional artist" ;
+    :hasSkillDevelopment "Fine arts techniques" .
+
+# Instance 50: AI Engineering at Coursera
+:AI_Engineer_50 rdf:type :Learner ;
+    rdfs:label "AI Engineer"@en ;
+    :choosesEducationalPath :PaidSystem_Coursera_2 ;
+    :hasLearningObjective "AI development" ;
+    :hasDemographics :Demographics_Coursera_50 .
+
+:Demographics_Coursera_50 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "26" ;
+    :locatedIn "Amsterdam" ;
+    :hasIncomeLevel "Medium" .
+
+:PaidSystem_Coursera_2 rdf:type :PaidSystem ;
+    rdfs:label "Coursera AI Program"@en ;
+    :isUsedBy :AI_Engineer_50 ;
+    :deliversContent :Content_Coursera_AI ;
+    :hasCredibility "Medium" ;
+    :hasSocietalPerception "Online learning" ;
+    :hasOutcome :Outcome_Coursera_AI .
+
+:Content_Coursera_AI rdf:type :Content ;
+    :hasDeliveryMethod "Online learning" ;
+    :hasContentFormat "Interactive modules" .
+
+:Outcome_Coursera_AI rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Online forums" ;
+    :hasPersonalGrowth "Technical skills" ;
+    :hasImpactOnCareer "AI development" ;
+    :hasSkillDevelopment "AI technologies" .
+
+# Instance 51: Pastry Arts at Le Cordon Bleu
+:Pastry_Arts_51 rdf:type :Learner ;
+    rdfs:label "Pastry Chef Student"@en ;
+    :choosesEducationalPath :PaidSystem_LCB ;
+    :hasLearningObjective "Pastry mastery" ;
+    :hasDemographics :Demographics_LCB_51 .
+
+:Demographics_LCB_51 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "25" ;
+    :locatedIn "Paris" ;
+    :hasIncomeLevel "High" .
+
+:PaidSystem_LCB rdf:type :PaidSystem ;
+    rdfs:label "Le Cordon Bleu Pastry"@en ;
+    :isUsedBy :Pastry_Arts_51 ;
+    :deliversContent :Content_LCB_Pastry ;
+    :hasCredibility "Very High" ;
+    :hasSocietalPerception "Culinary excellence" ;
+    :hasOutcome :Outcome_LCB_Pastry .
+
+:Content_LCB_Pastry rdf:type :Content ;
+    :hasDeliveryMethod "Kitchen practice" ;
+    :hasContentFormat "Hands-on training" .
+
+:Outcome_LCB_Pastry rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Culinary events" ;
+    :hasPersonalGrowth "Culinary skills" ;
+    :hasImpactOnCareer "Pastry chef" ;
+    :hasSkillDevelopment "Pastry techniques" .
+
+# Instance 52: Finance MBA at Wharton
+:Finance_MBA_52 rdf:type :Learner ;
+    rdfs:label "Finance MBA Student"@en ;
+    :choosesEducationalPath :PaidSystem_Wharton ;
+    :hasLearningObjective "Financial leadership" ;
+    :hasDemographics :Demographics_Wharton_52 .
+
+:Demographics_Wharton_52 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "30" ;
+    :locatedIn "Philadelphia" ;
+    :hasIncomeLevel "High" .
+
+:PaidSystem_Wharton rdf:type :PaidSystem ;
+    rdfs:label "Wharton Finance MBA"@en ;
+    :isUsedBy :Finance_MBA_52 ;
+    :deliversContent :Content_Wharton_Finance ;
+    :hasCredibility "Very High" ;
+    :hasSocietalPerception "Business excellence" ;
+    :hasOutcome :Outcome_Wharton_Finance .
+
+:Content_Wharton_Finance rdf:type :Content ;
+    :hasDeliveryMethod "Case studies" ;
+    :hasContentFormat "Business practice" .
+
+:Outcome_Wharton_Finance rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Finance conferences" ;
+    :hasPersonalGrowth "Leadership skills" ;
+    :hasImpactOnCareer "Financial executive" ;
+    :hasSkillDevelopment "Financial strategy" .
+
+# Instance 53: Welding at Swedish Technical College
+:Welding_53 rdf:type :Learner ;
+    rdfs:label "Welding Student"@en ;
+    :choosesEducationalPath :FreeSystem_STC ;
+    :hasLearningObjective "Welding mastery" ;
+    :hasDemographics :Demographics_STC_53 .
+
+:Demographics_STC_53 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "20" ;
+    :locatedIn "Stockholm" ;
+    :hasIncomeLevel "Low" .
+
+:FreeSystem_STC rdf:type :FreeSystem ;
+    rdfs:label "Swedish Technical College"@en ;
+    :isUsedBy :Welding_53 ;
+    :deliversContent :Content_STC_Welding ;
+    :hasCredibility "Medium" ;
+    :hasSocietalPerception "Vocational training" ;
+    :hasOutcome :Outcome_STC_Welding .
+
+:Content_STC_Welding rdf:type :Content ;
+    :hasDeliveryMethod "Workshop training" ;
+    :hasContentFormat "Practical work" .
+
+:Outcome_STC_Welding rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Trade events" ;
+    :hasPersonalGrowth "Technical skills" ;
+    :hasImpactOnCareer "Welding industry" ;
+    :hasSkillDevelopment "Welding techniques" .
+
+# Instance 54: Cybersecurity at Pluralsight
+:Cybersecurity_54 rdf:type :Learner ;
+    rdfs:label "Cybersecurity Student"@en ;
+    :choosesEducationalPath :FreeSystem_Pluralsight ;
+    :hasLearningObjective "Security expertise" ;
+    :hasDemographics :Demographics_Pluralsight_54 .
+
+:Demographics_Pluralsight_54 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "27" ;
+    :locatedIn "Barcelona" ;
+    :hasIncomeLevel "Medium" .
+
+:FreeSystem_Pluralsight rdf:type :FreeSystem ;
+    rdfs:label "Pluralsight Security"@en ;
+    :isUsedBy :Cybersecurity_54 ;
+    :deliversContent :Content_Pluralsight_Security ;
+    :hasCredibility "Medium" ;
+    :hasSocietalPerception "Online learning" ;
+    :hasOutcome :Outcome_Pluralsight_Security .
+
+:Content_Pluralsight_Security rdf:type :Content ;
+    :hasDeliveryMethod "Online learning" ;
+    :hasContentFormat "Interactive modules" .
+
+:Outcome_Pluralsight_Security rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Security forums" ;
+    :hasPersonalGrowth "Security skills" ;
+    :hasImpactOnCareer "Security specialist" ;
+    :hasSkillDevelopment "Security tools" .
+
+# Instance 55: Film Production at Prague Film Academy
+:Film_Production_55 rdf:type :Learner ;
+    rdfs:label "Film Production Student"@en ;
+    :choosesEducationalPath :PaidSystem_PragueFilm ;
+    :hasLearningObjective "Film production" ;
+    :hasDemographics :Demographics_PragueFilm_55 .
+
+:Demographics_PragueFilm_55 rdf:type :LearnerDemographics ;
+    :belongsToAgeGroup "25" ;
+    :locatedIn "Prague" ;
+    :hasIncomeLevel "Medium" .
+
+:PaidSystem_PragueFilm rdf:type :PaidSystem ;
+    rdfs:label "Prague Film Academy"@en ;
+    :isUsedBy :Film_Production_55 ;
+    :deliversContent :Content_PragueFilm_Production ;
+    :hasCredibility "High" ;
+    :hasSocietalPerception "Film excellence" ;
+    :hasOutcome :Outcome_PragueFilm_Production .
+
+:Content_PragueFilm_Production rdf:type :Content ;
+    :hasDeliveryMethod "Practical training" ;
+    :hasContentFormat "Film projects" .
+
+:Outcome_PragueFilm_Production rdf:type :Outcome ;
+    :hasNetworkingOpportunities "Film festivals" ;
+    :hasPersonalGrowth "Creative skills" ;
+    :hasImpactOnCareer "Film industry" ;
+    :hasSkillDevelopment "Film production" .

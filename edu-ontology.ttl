@@ -1,0 +1,242 @@
+@prefix : <http://www.semanticweb.org/ontologies/2024/EDU/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@base <http://www.semanticweb.org/ontologies/2024/EDU/> .
+
+# Ontology Declaration
+<http://www.semanticweb.org/ontologies/2024/EDU> rdf:type owl:Ontology .
+
+##############################
+#    Classes
+##############################
+
+# Core Classes
+:EducationalSystem rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:label "Educational System"@en .
+
+:PaidSystem rdf:type owl:Class ;
+    rdfs:subClassOf :EducationalSystem ;
+    rdfs:label "Paid System"@en .
+
+:FreeSystem rdf:type owl:Class ;
+    rdfs:subClassOf :EducationalSystem ;
+    rdfs:label "Free System"@en .
+
+:Content rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:label "Content"@en .
+
+:Outcome rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:label "Outcome"@en .
+
+:NetworkingOpportunities rdf:type owl:Class ;
+    rdfs:subClassOf :Outcome ;
+    rdfs:label "Networking Opportunities"@en .
+
+:PersonalGrowth rdf:type owl:Class ;
+    rdfs:subClassOf :Outcome ;
+    rdfs:label "Personal Growth"@en .
+
+:ImpactOnCareer rdf:type owl:Class ;
+    rdfs:subClassOf :Outcome ;
+    rdfs:label "Impact on Career"@en .
+
+:SkillDevelopment rdf:type owl:Class ;
+    rdfs:subClassOf :Outcome ;
+    rdfs:label "Skill Development"@en .
+
+:Learner rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:label "Learner"@en .
+
+:LearnerDemographics rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:label "Learner Demographics"@en .
+
+:Credibility rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:label "Credibility"@en .
+
+:SocietalPerception rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:label "Societal Perception"@en .
+
+:LearningObjective rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:label "Learning Objective"@en .
+
+:EducationalProviders rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:label "Educational Providers"@en .
+
+:Sponsors rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:label "Sponsors"@en .
+
+# Perspective Classes
+:ExternalViewpoint rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:label "External Viewpoint"@en .
+
+:InternalViewpoint rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:label "Internal Viewpoint"@en .
+
+:Influence rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:label "Influence"@en .
+
+:PerspectiveShift rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:label "Perspective Shift"@en .
+
+:Stereotype rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:label "Stereotype"@en .
+
+:PositiveAttitude rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:label "Positive Attitude"@en .
+
+:NegativeAttitude rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:label "Negative Attitude"@en .
+
+:NeutralAttitude rdf:type owl:Class ;
+    rdfs:subClassOf owl:Thing ;
+    rdfs:label "Neutral Attitude"@en .
+
+##############################
+#    Object Properties
+##############################
+
+:isUsedBy rdf:type owl:ObjectProperty ;
+    rdfs:domain :EducationalSystem ;
+    rdfs:range :Learner .
+
+:hasSocietalPerception rdf:type owl:ObjectProperty ;
+    rdfs:domain :EducationalSystem ;
+    rdfs:range :SocietalPerception .
+
+:choosesEducationalPath rdf:type owl:ObjectProperty ;
+    rdfs:domain :Learner ;
+    rdfs:range :EducationalSystem .
+
+:hasDemographics rdf:type owl:ObjectProperty ;
+    rdfs:domain :Learner ;
+    rdfs:range :LearnerDemographics .
+
+:hasLearningObjective rdf:type owl:ObjectProperty ;
+    rdfs:domain :Learner ;
+    rdfs:range :LearningObjective .
+
+:deliversContent rdf:type owl:ObjectProperty ;
+    rdfs:domain :EducationalSystem ;
+    rdfs:range :Content .
+
+:hasOutcome rdf:type owl:ObjectProperty ;
+    rdfs:domain :EducationalSystem ;
+    rdfs:range :Outcome .
+
+:offeredBy rdf:type owl:ObjectProperty ;
+    rdfs:domain :Certification ;
+    rdfs:range :EducationalSystem .
+
+:hasCredibility rdf:type owl:ObjectProperty ;
+    rdfs:domain :PaidSystem ;
+    rdfs:range :Credibility .
+
+:provides rdf:type owl:ObjectProperty ;
+    rdfs:domain :EducationalProviders ;
+    rdfs:range :EducationalSystem .
+
+:funds rdf:type owl:ObjectProperty ;
+    rdfs:domain :Sponsors ;
+    rdfs:range :FreeSystem .
+
+# Perspective-Related Properties
+:hasViewpoint rdf:type owl:ObjectProperty ;
+    rdfs:domain :People ;
+    rdfs:range [ rdf:type owl:Class ;
+                 owl:unionOf (:InternalViewpoint :ExternalViewpoint) ] .
+
+:hasAttitude rdf:type owl:ObjectProperty ;
+    rdfs:domain :People ;
+    rdfs:range [ rdf:type owl:Class ;
+                 owl:unionOf (:PositiveAttitude :NegativeAttitude :NeutralAttitude) ] .
+
+:influencedBy rdf:type owl:ObjectProperty ;
+    rdfs:domain [ rdf:type owl:Class ;
+                  owl:unionOf (:PositiveAttitude :NegativeAttitude :NeutralAttitude) ] ;
+    rdfs:range :Influence .
+
+:triggersStereotype rdf:type owl:ObjectProperty ;
+    rdfs:domain :EducationalSystem ;
+    rdfs:range :Stereotype .
+
+:isCharacterisedBy rdf:type owl:ObjectProperty ;
+    rdfs:domain [ rdf:type owl:Class ;
+                  owl:unionOf (:ExternalViewpoint :InternalViewpoint) ] ;
+    rdfs:range :PerspectiveShift .
+
+:expressedVia rdf:type owl:ObjectProperty ;
+    rdfs:domain [ rdf:type owl:Class ;
+                  owl:unionOf (:PositiveAttitude :NegativeAttitude :NeutralAttitude) ] ;
+    rdfs:range :Stereotype .
+
+:determines rdf:type owl:ObjectProperty ;
+    rdfs:domain [ rdf:type owl:Class ;
+                  owl:unionOf (:ExternalViewpoint :InternalViewpoint) ] ;
+    rdfs:range [ rdf:type owl:Class ;
+                 owl:unionOf (:PositiveAttitude :NegativeAttitude :NeutralAttitude) ] .
+
+##############################
+#    Data Properties
+##############################
+
+:hasCost rdf:type owl:DatatypeProperty ;
+    rdfs:domain [ rdf:type owl:Class ;
+                  owl:unionOf (:FreeSystem :PaidSystem) ] ;
+    rdfs:range xsd:decimal .
+
+:hasQualityMetrics rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Content ;
+    rdfs:range xsd:string .
+
+:hasDeliveryMethod rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Content ;
+    rdfs:range xsd:string .
+
+:hasContentFormat rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Content ;
+    rdfs:range xsd:string .
+
+:hasContentLanguage rdf:type owl:DatatypeProperty ;
+    rdfs:domain :Content ;
+    rdfs:range xsd:string .
+
+:hasAccessibility rdf:type owl:DatatypeProperty ;
+    rdfs:domain :EducationalSystem ;
+    rdfs:range xsd:string .
+
+:belongsToAgeGroup rdf:type owl:DatatypeProperty ;
+    rdfs:domain :LearnerDemographics ;
+    rdfs:range xsd:string .
+
+:locatedIn rdf:type owl:DatatypeProperty ;
+    rdfs:domain :LearnerDemographics ;
+    rdfs:range xsd:string .
+
+:hasEducationalBackground rdf:type owl:DatatypeProperty ;
+    rdfs:domain :LearnerDemographics ;
+    rdfs:range xsd:string .
+
+:hasIncomeLevel rdf:type owl:DatatypeProperty ;
+    rdfs:domain :LearnerDemographics ;
+    rdfs:range xsd:string .
