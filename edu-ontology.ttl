@@ -1,242 +1,443 @@
 @prefix : <http://www.semanticweb.org/ontologies/2024/EDU/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix frame: <http://etna.istc.cnr.it/framester2/data/framestercore/> .
 @base <http://www.semanticweb.org/ontologies/2024/EDU/> .
 
-# Ontology Declaration
-<http://www.semanticweb.org/ontologies/2024/EDU> rdf:type owl:Ontology .
+<http://www.semanticweb.org/ontologies/2024/EDU> rdf:type owl:Ontology ;
+                                                  owl:imports <http://www.semanticweb.org/ontologies/2024/EDU> .
 
-##############################
-#    Classes
-##############################
-
-# Core Classes
-:EducationalSystem rdf:type owl:Class ;
-    rdfs:subClassOf owl:Thing ;
-    rdfs:label "Educational System"@en .
-
-:PaidSystem rdf:type owl:Class ;
-    rdfs:subClassOf :EducationalSystem ;
-    rdfs:label "Paid System"@en .
-
-:FreeSystem rdf:type owl:Class ;
-    rdfs:subClassOf :EducationalSystem ;
-    rdfs:label "Free System"@en .
-
-:Content rdf:type owl:Class ;
-    rdfs:subClassOf owl:Thing ;
-    rdfs:label "Content"@en .
-
-:Outcome rdf:type owl:Class ;
-    rdfs:subClassOf owl:Thing ;
-    rdfs:label "Outcome"@en .
-
-:NetworkingOpportunities rdf:type owl:Class ;
-    rdfs:subClassOf :Outcome ;
-    rdfs:label "Networking Opportunities"@en .
-
-:PersonalGrowth rdf:type owl:Class ;
-    rdfs:subClassOf :Outcome ;
-    rdfs:label "Personal Growth"@en .
-
-:ImpactOnCareer rdf:type owl:Class ;
-    rdfs:subClassOf :Outcome ;
-    rdfs:label "Impact on Career"@en .
-
-:SkillDevelopment rdf:type owl:Class ;
-    rdfs:subClassOf :Outcome ;
-    rdfs:label "Skill Development"@en .
-
-:Learner rdf:type owl:Class ;
-    rdfs:subClassOf owl:Thing ;
-    rdfs:label "Learner"@en .
-
-:LearnerDemographics rdf:type owl:Class ;
-    rdfs:subClassOf owl:Thing ;
-    rdfs:label "Learner Demographics"@en .
-
-:Credibility rdf:type owl:Class ;
-    rdfs:subClassOf owl:Thing ;
-    rdfs:label "Credibility"@en .
-
-:SocietalPerception rdf:type owl:Class ;
-    rdfs:subClassOf owl:Thing ;
-    rdfs:label "Societal Perception"@en .
-
-:LearningObjective rdf:type owl:Class ;
-    rdfs:subClassOf owl:Thing ;
-    rdfs:label "Learning Objective"@en .
-
-:EducationalProviders rdf:type owl:Class ;
-    rdfs:subClassOf owl:Thing ;
-    rdfs:label "Educational Providers"@en .
-
-:Sponsors rdf:type owl:Class ;
-    rdfs:subClassOf owl:Thing ;
-    rdfs:label "Sponsors"@en .
-
-# Perspective Classes
-:ExternalViewpoint rdf:type owl:Class ;
-    rdfs:subClassOf owl:Thing ;
-    rdfs:label "External Viewpoint"@en .
-
-:InternalViewpoint rdf:type owl:Class ;
-    rdfs:subClassOf owl:Thing ;
-    rdfs:label "Internal Viewpoint"@en .
-
-:Influence rdf:type owl:Class ;
-    rdfs:subClassOf owl:Thing ;
-    rdfs:label "Influence"@en .
-
-:PerspectiveShift rdf:type owl:Class ;
-    rdfs:subClassOf owl:Thing ;
-    rdfs:label "Perspective Shift"@en .
-
-:Stereotype rdf:type owl:Class ;
-    rdfs:subClassOf owl:Thing ;
-    rdfs:label "Stereotype"@en .
-
-:PositiveAttitude rdf:type owl:Class ;
-    rdfs:subClassOf owl:Thing ;
-    rdfs:label "Positive Attitude"@en .
-
-:NegativeAttitude rdf:type owl:Class ;
-    rdfs:subClassOf owl:Thing ;
-    rdfs:label "Negative Attitude"@en .
-
-:NeutralAttitude rdf:type owl:Class ;
-    rdfs:subClassOf owl:Thing ;
-    rdfs:label "Neutral Attitude"@en .
-
-##############################
+#################################################################
 #    Object Properties
-##############################
+#################################################################
 
-:isUsedBy rdf:type owl:ObjectProperty ;
-    rdfs:domain :EducationalSystem ;
-    rdfs:range :Learner .
-
-:hasSocietalPerception rdf:type owl:ObjectProperty ;
-    rdfs:domain :EducationalSystem ;
-    rdfs:range :SocietalPerception .
-
+###  http://www.semanticweb.org/ontologies/2024/EDU/choosesEducationalPath
 :choosesEducationalPath rdf:type owl:ObjectProperty ;
-    rdfs:domain :Learner ;
-    rdfs:range :EducationalSystem .
+                        rdfs:domain :Learner ;
+                        rdfs:range :EducationalSystem .
 
-:hasDemographics rdf:type owl:ObjectProperty ;
-    rdfs:domain :Learner ;
-    rdfs:range :LearnerDemographics .
 
-:hasLearningObjective rdf:type owl:ObjectProperty ;
-    rdfs:domain :Learner ;
-    rdfs:range :LearningObjective .
-
+###  http://www.semanticweb.org/ontologies/2024/EDU/deliversContent
 :deliversContent rdf:type owl:ObjectProperty ;
-    rdfs:domain :EducationalSystem ;
-    rdfs:range :Content .
+                 rdfs:domain :EducationalSystem ;
+                 rdfs:range :Content .
 
-:hasOutcome rdf:type owl:ObjectProperty ;
-    rdfs:domain :EducationalSystem ;
-    rdfs:range :Outcome .
 
-:offeredBy rdf:type owl:ObjectProperty ;
-    rdfs:domain :Certification ;
-    rdfs:range :EducationalSystem .
-
-:hasCredibility rdf:type owl:ObjectProperty ;
-    rdfs:domain :PaidSystem ;
-    rdfs:range :Credibility .
-
-:provides rdf:type owl:ObjectProperty ;
-    rdfs:domain :EducationalProviders ;
-    rdfs:range :EducationalSystem .
-
-:funds rdf:type owl:ObjectProperty ;
-    rdfs:domain :Sponsors ;
-    rdfs:range :FreeSystem .
-
-# Perspective-Related Properties
-:hasViewpoint rdf:type owl:ObjectProperty ;
-    rdfs:domain :People ;
-    rdfs:range [ rdf:type owl:Class ;
-                 owl:unionOf (:InternalViewpoint :ExternalViewpoint) ] .
-
-:hasAttitude rdf:type owl:ObjectProperty ;
-    rdfs:domain :People ;
-    rdfs:range [ rdf:type owl:Class ;
-                 owl:unionOf (:PositiveAttitude :NegativeAttitude :NeutralAttitude) ] .
-
-:influencedBy rdf:type owl:ObjectProperty ;
-    rdfs:domain [ rdf:type owl:Class ;
-                  owl:unionOf (:PositiveAttitude :NegativeAttitude :NeutralAttitude) ] ;
-    rdfs:range :Influence .
-
-:triggersStereotype rdf:type owl:ObjectProperty ;
-    rdfs:domain :EducationalSystem ;
-    rdfs:range :Stereotype .
-
-:isCharacterisedBy rdf:type owl:ObjectProperty ;
-    rdfs:domain [ rdf:type owl:Class ;
-                  owl:unionOf (:ExternalViewpoint :InternalViewpoint) ] ;
-    rdfs:range :PerspectiveShift .
-
-:expressedVia rdf:type owl:ObjectProperty ;
-    rdfs:domain [ rdf:type owl:Class ;
-                  owl:unionOf (:PositiveAttitude :NegativeAttitude :NeutralAttitude) ] ;
-    rdfs:range :Stereotype .
-
+###  http://www.semanticweb.org/ontologies/2024/EDU/determines
 :determines rdf:type owl:ObjectProperty ;
-    rdfs:domain [ rdf:type owl:Class ;
-                  owl:unionOf (:ExternalViewpoint :InternalViewpoint) ] ;
-    rdfs:range [ rdf:type owl:Class ;
-                 owl:unionOf (:PositiveAttitude :NegativeAttitude :NeutralAttitude) ] .
+            rdfs:domain :Perspective ;
+            rdfs:range :Attitude ;
+            rdfs:label "determines"@en .
 
-##############################
-#    Data Properties
-##############################
 
-:hasCost rdf:type owl:DatatypeProperty ;
-    rdfs:domain [ rdf:type owl:Class ;
-                  owl:unionOf (:FreeSystem :PaidSystem) ] ;
-    rdfs:range xsd:decimal .
+###  http://www.semanticweb.org/ontologies/2024/EDU/expressedVia
+:expressedVia rdf:type owl:ObjectProperty ;
+              rdfs:domain :Attitude ;
+              rdfs:range [ rdf:type owl:Class ;
+                           owl:unionOf ( :MoralValue
+                                         :Stereotype
+                                       )
+                         ] ;
+              rdfs:label "expressed via"@en .
 
-:hasQualityMetrics rdf:type owl:DatatypeProperty ;
-    rdfs:domain :Content ;
-    rdfs:range xsd:string .
 
-:hasDeliveryMethod rdf:type owl:DatatypeProperty ;
-    rdfs:domain :Content ;
-    rdfs:range xsd:string .
+###  http://www.semanticweb.org/ontologies/2024/EDU/funds
+:funds rdf:type owl:ObjectProperty ;
+       rdfs:domain :Sponsors ;
+       rdfs:range :FreeEducationSystem .
 
-:hasContentFormat rdf:type owl:DatatypeProperty ;
-    rdfs:domain :Content ;
-    rdfs:range xsd:string .
 
-:hasContentLanguage rdf:type owl:DatatypeProperty ;
-    rdfs:domain :Content ;
-    rdfs:range xsd:string .
+###  http://www.semanticweb.org/ontologies/2024/EDU/hasAttitude
+:hasAttitude rdf:type owl:ObjectProperty ;
+             owl:inverseOf :isAttitudeOf ;
+             rdfs:domain :People ;
+             rdfs:range :Attitude ;
+             rdfs:label "has attitude"@en .
 
-:hasAccessibility rdf:type owl:DatatypeProperty ;
-    rdfs:domain :EducationalSystem ;
-    rdfs:range xsd:string .
 
+###  http://www.semanticweb.org/ontologies/2024/EDU/hasCredibility
+:hasCredibility rdf:type owl:ObjectProperty ;
+                rdfs:domain :EducationalSystem ;
+                rdfs:range :Credibility .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/hasDemographics
+:hasDemographics rdf:type owl:ObjectProperty ;
+                 rdfs:domain :Learner ;
+                 rdfs:range :LearnerDemographics .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/hasInfluencingFactors
+:hasInfluencingFactors rdf:type owl:ObjectProperty ;
+                       rdfs:domain :EducationalSystem ;
+                       rdfs:range :Influence ;
+                       rdfs:label "has influencing factors"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/hasLearningObjective
+:hasLearningObjective rdf:type owl:ObjectProperty ;
+                      rdfs:domain :Learner ;
+                      rdfs:range :LearningObjective .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/hasOutcome
+:hasOutcome rdf:type owl:ObjectProperty ;
+            rdfs:domain :EducationalSystem ;
+            rdfs:range :Outcome .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/hasParticipant
+:hasParticipant rdf:type owl:ObjectProperty ;
+                rdfs:domain :EducationalSystem ;
+                rdfs:range :People ;
+                rdfs:label "has participant"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/hasPerspectiveOf
+:hasPerspectiveOf rdf:type owl:ObjectProperty ;
+                  rdfs:domain :People ;
+                  rdfs:range :EducationalSystem ;
+                  rdfs:label "has perspective of"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/hasPerspectiveShift
+:hasPerspectiveShift rdf:type owl:ObjectProperty ;
+                     rdfs:domain :EducationalSystem ;
+                     rdfs:range :PerspectiveShift ;
+                     rdfs:label "has perspective shift"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/hasSocietalPerception
+:hasSocietalPerception rdf:type owl:ObjectProperty ;
+                       rdfs:domain :EducationalSystem ;
+                       rdfs:range :SocietalPerception .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/hasViewpoint
+:hasViewpoint rdf:type owl:ObjectProperty ;
+              owl:inverseOf :isViewpointOf ;
+              rdfs:domain :People ;
+              rdfs:range [ rdf:type owl:Class ;
+                           owl:unionOf ( :ExternalViewpoint
+                                         :InternalViewpoint
+                                       )
+                         ] ;
+              rdfs:label "has viewpoint"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/influences
+:influences rdf:type owl:ObjectProperty ;
+            rdfs:domain :Influence ;
+            rdfs:range :Attitude ;
+            rdfs:label "influences"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/isAttitudeOf
+:isAttitudeOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/isStereotypeOf
+:isStereotypeOf rdf:type owl:ObjectProperty ;
+                owl:inverseOf :triggersStereotype .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/isUsedBy
+:isUsedBy rdf:type owl:ObjectProperty ;
+          rdfs:domain :EducationalSystem ;
+          rdfs:range :Learner .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/isViewpointOf
+:isViewpointOf rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/offeredBy
+:offeredBy rdf:type owl:ObjectProperty ;
+           rdfs:domain :Certification ;
+           rdfs:range :EducationalSystem .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/provides
+:provides rdf:type owl:ObjectProperty ;
+          rdfs:domain :EducationalProviders ;
+          rdfs:range :EducationalSystem .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/triggersStereotype
+:triggersStereotype rdf:type owl:ObjectProperty ;
+                    rdfs:domain :EducationalSystem ;
+                    rdfs:range :Stereotype ;
+                    rdfs:label "triggers stereotype"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/belongsToAgeGroup
 :belongsToAgeGroup rdf:type owl:DatatypeProperty ;
-    rdfs:domain :LearnerDemographics ;
-    rdfs:range xsd:string .
+                   rdfs:domain :LearnerDemographics ;
+                   rdfs:range xsd:string .
 
-:locatedIn rdf:type owl:DatatypeProperty ;
-    rdfs:domain :LearnerDemographics ;
-    rdfs:range xsd:string .
 
+###  http://www.semanticweb.org/ontologies/2024/EDU/hasAccessibility
+:hasAccessibility rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :EducationalSystem ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/hasContent
+:hasContent rdf:type owl:DatatypeProperty ;
+            rdfs:domain [ rdf:type owl:Class ;
+                          owl:unionOf ( :Influence
+                                        :PerspectiveShift
+                                        :Stereotype
+                                      )
+                        ] ;
+            rdfs:range xsd:string ;
+            rdfs:label "has content"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/hasContentFormat
+:hasContentFormat rdf:type owl:DatatypeProperty ;
+                  rdfs:domain :Content ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/hasContentLanguage
+:hasContentLanguage rdf:type owl:DatatypeProperty ;
+                    rdfs:domain :Content ;
+                    rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/hasCost
+:hasCost rdf:type owl:DatatypeProperty ;
+         rdfs:domain :EducationalSystem ;
+         rdfs:range xsd:decimal .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/hasDeliveryMethod
+:hasDeliveryMethod rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Content ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/hasEducationalBackground
 :hasEducationalBackground rdf:type owl:DatatypeProperty ;
-    rdfs:domain :LearnerDemographics ;
-    rdfs:range xsd:string .
+                          rdfs:domain :LearnerDemographics ;
+                          rdfs:range xsd:string .
 
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/hasIncomeLevel
 :hasIncomeLevel rdf:type owl:DatatypeProperty ;
-    rdfs:domain :LearnerDemographics ;
-    rdfs:range xsd:string .
+                rdfs:domain :LearnerDemographics ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/hasQualityMetrics
+:hasQualityMetrics rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Content ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/locatedIn
+:locatedIn rdf:type owl:DatatypeProperty ;
+           rdfs:domain :LearnerDemographics ;
+           rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/Agent
+:Agent rdf:type owl:Class ;
+       rdfs:subClassOf owl:Thing ;
+       rdfs:label "Agent"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/Attitude
+:Attitude rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          rdfs:label "Attitude"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/Certification
+:Certification rdf:type owl:Class ;
+               rdfs:subClassOf owl:Thing ;
+               rdfs:label "Certification"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/Content
+:Content rdf:type owl:Class ;
+         rdfs:subClassOf owl:Thing ;
+         rdfs:label "Content"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/Credibility
+:Credibility rdf:type owl:Class ;
+             rdfs:subClassOf owl:Thing ;
+             rdfs:label "Credibility"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/EducationalProviders
+:EducationalProviders rdf:type owl:Class ;
+                      rdfs:subClassOf :Agent ;
+                      rdfs:label "Educational Providers"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/EducationalSystem
+:EducationalSystem rdf:type owl:Class ;
+                   rdfs:subClassOf owl:Thing ;
+                   rdfs:label "Educational System"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/ExternalViewpoint
+:ExternalViewpoint rdf:type owl:Class ;
+                   rdfs:subClassOf :Perspective ;
+                   owl:disjointWith :InternalViewpoint ;
+                   rdfs:label "External Viewpoint"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/FreeEducationSystem
+:FreeEducationSystem rdf:type owl:Class ;
+                     rdfs:subClassOf :EducationalSystem ;
+                     owl:disjointWith :PaidEducationSystem ;
+                     rdfs:label "Free Educational System"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/ImpactOnCareer
+:ImpactOnCareer rdf:type owl:Class ;
+                rdfs:subClassOf :Outcome ;
+                rdfs:label "Impact on Career"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/Influence
+:Influence rdf:type owl:Class ;
+           rdfs:subClassOf owl:Thing ;
+           rdfs:label "Influence"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/InternalViewpoint
+:InternalViewpoint rdf:type owl:Class ;
+                   rdfs:subClassOf :Perspective ;
+                   rdfs:label "Internal Viewpoint"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/Learner
+:Learner rdf:type owl:Class ;
+         rdfs:subClassOf :People ;
+         rdfs:label "Learner"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/LearnerDemographics
+:LearnerDemographics rdf:type owl:Class ;
+                     rdfs:subClassOf owl:Thing ;
+                     rdfs:label "Learner Demographics"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/LearningObjective
+:LearningObjective rdf:type owl:Class ;
+                   rdfs:subClassOf owl:Thing ;
+                   rdfs:label "Learning Objective"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/MoralValue
+:MoralValue rdf:type owl:Class ;
+            rdfs:subClassOf owl:Thing ;
+            rdfs:label "Moral Value"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/NegativeAttitude
+:NegativeAttitude rdf:type owl:Class ;
+                  rdfs:subClassOf :Attitude ;
+                  owl:disjointWith :NeutralAttitude ,
+                                   :PositiveAttitude ;
+                  rdfs:label "Negative Attitude"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/NetworkingOpportunities
+:NetworkingOpportunities rdf:type owl:Class ;
+                         rdfs:subClassOf :Outcome ;
+                         rdfs:label "Networking Opportunities"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/NeutralAttitude
+:NeutralAttitude rdf:type owl:Class ;
+                 rdfs:subClassOf :Attitude ;
+                 owl:disjointWith :PositiveAttitude ;
+                 rdfs:label "Neutral Attitude"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/Outcome
+:Outcome rdf:type owl:Class ;
+         rdfs:subClassOf owl:Thing ;
+         rdfs:label "Outcome"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/PaidEducationSystem
+:PaidEducationSystem rdf:type owl:Class ;
+                     rdfs:subClassOf :EducationalSystem ;
+                     rdfs:label "Paid Educational System"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/People
+:People rdf:type owl:Class ;
+        rdfs:subClassOf owl:Thing ;
+        rdfs:comment "People who have perspectives on educational systems"@en ;
+        rdfs:label "People"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/PersonalGrowth
+:PersonalGrowth rdf:type owl:Class ;
+                rdfs:subClassOf :Outcome ;
+                rdfs:label "Personal Growth"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/Perspective
+:Perspective rdf:type owl:Class ;
+             rdfs:subClassOf owl:Thing ;
+             rdfs:label "Perspective"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/PerspectiveShift
+:PerspectiveShift rdf:type owl:Class ;
+                  rdfs:subClassOf owl:Thing ;
+                  rdfs:label "Perspective Shift"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/PositiveAttitude
+:PositiveAttitude rdf:type owl:Class ;
+                  rdfs:subClassOf :Attitude ;
+                  rdfs:label "Positive Attitude"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/SkillDevelopment
+:SkillDevelopment rdf:type owl:Class ;
+                  rdfs:subClassOf :Outcome ;
+                  rdfs:label "Skill Development"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/SocietalPerception
+:SocietalPerception rdf:type owl:Class ;
+                    rdfs:subClassOf owl:Thing ;
+                    rdfs:label "Societal Perception"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/Sponsors
+:Sponsors rdf:type owl:Class ;
+          rdfs:subClassOf :Agent ;
+          rdfs:label "Sponsors"@en .
+
+
+###  http://www.semanticweb.org/ontologies/2024/EDU/Stereotype
+:Stereotype rdf:type owl:Class ;
+            rdfs:subClassOf owl:Thing ;
+            rdfs:label "Stereotype"@en .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
