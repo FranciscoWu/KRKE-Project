@@ -39,39 +39,18 @@ PaidSystem,Game Design Student,Savannah College of Art and Design,Creative probl
 FreeSystem,Agricultural Sciences,Wageningen University,Sustainable farming,Agricultural innovation groups,Environmental responsibility,Agricultural research roles,Crop management techniques,Degree Certificate,Respected globally,Medium,Master sustainable agriculture methods,"24, Wageningen, Medium",
 PaidSystem,Luxury Brand Manager,ESSEC Business School,Leadership in luxury,Luxury industry forums,Brand management skills,Executive roles in luxury firms,Marketing and brand strategy,Degree Certificate,Prestigious globally,High,Build expertise in luxury brand management,"28, Paris, High",
 PaidSystem,Computer Science Graduate,Stanford University,Problem-solving development,Tech networking events,Entrepreneurial mindset,Growth in software engineering roles,Advanced coding and AI skills,Degree Certificate,Prestigious globally,High,Master advanced algorithms and machine learning,"24, California, High",
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,,,,,,,,,,,,,
-,FreeSystem,Physics Master's Student,University of Copenhagen,Research excellence,Academic conferences,Critical thinking skills,Academia and R&D,Advanced mathematical skills,Degree Certificate,Respected regionally,High,Conduct physics-based research,"26, Copenhagen, High"
-,FreeSystem,Data Analysis Learner,edX,Career change,Online learning forums,Analytical reasoning,Transition to data jobs,Statistical data analysis,Course Certificate,Growing recognition,Medium,Master data analytics tools,"28, Berlin, Medium"
-,PaidSystem,Law Graduate,Yale Law School,Legal proficiency,Peer legal study groups,Negotiation and logic skills,Join top-tier law firms,Legal research skills,Degree Certificate,Prestigious,High,Understand constitutional law,"27, New York, High"
-,FreeSystem,Electrician Apprentice,French Trade School,Trade proficiency,Trade events,Technical expertise,Employment in energy sectors,Practical electrical systems,Trade Certification,Trusted locally,Medium,Master electrical systems design,"21, Paris, Medium"
-,PaidSystem,IB Diploma Graduate,UWC Atlantic College,Admission to Ivy League,International cultural exchanges,Global awareness,Higher education opportunities,Critical academic preparation,IB Diploma,Globally respected,High,Prepare for interdisciplinary study,"17, London, High"
-,FreeSystem,Biology PhD Student,University of Zurich,Research excellence,Research symposiums,Critical problem-solving,Academia and innovation,Advanced research methodologies,Doctoral Degree,Respected worldwide,High,Innovate in biological sciences,"32, Zurich, High"
-,PaidSystem,Front-End Developer,Udacity,Tech employment,Virtual hackathons,Problem-solving skills,Immediate job placement,Responsive web design,Bootcamp Certificate,Growing in tech,Medium,Develop full-stack front-end apps,"24, Madrid, Medium"
-,FreeSystem,Science High School Student,Helsinki Public High School,STEM foundations,Local science fairs,Teamwork and basic research,University preparation,Foundational STEM skills,High School Diploma,Respected locally,Medium,Prepare for STEM careers,"18, Helsinki, Low"
-,PaidSystem,Fine Arts Student,Royal College of Art,Media and design career,Art exhibitions,Artistic creativity,Employment in media studios,Professional design skills,Diploma,Respected in industry,Medium,Master multimedia design tools,"22, Florence, Medium"
-,PaidSystem,AI Engineer Trainee,Coursera,AI career progression,AI industry webinars,Independent learning,Develop AI-based applications,Machine learning tools,Course Certificate,Growing recognition,Medium,Master AI frameworks,"26, Amsterdam, Medium"
-,PaidSystem,Pastry Chef Trainee,Le Cordon Bleu,Culinary mastery,Culinary networking events,Creativity and precision,Work in fine-dining restaurants,Gourmet pastry techniques,Culinary Diploma,Prestigious globally,High,Master advanced pastry arts,"25, Paris, High"
-,PaidSystem,Finance MBA Candidate,Wharton Business School,Leadership in finance,Finance networking events,Leadership and analysis,C-Suite career progression,Advanced financial strategy,MBA Degree,Prestigious globally,High,Excel in global finance leadership,"30, Philadelphia, High"
-,FreeSystem,Welding Trainee,Swedish Technical College,Industrial trade skills,Regional trade competitions,Technical precision skills,Employment in manufacturing,Practical welding techniques,Trade Certification,Respected regionally,Medium,Master precision welding techniques,"20, Stockholm, Low"
-,FreeSystem,Cybersecurity Enthusiast,Pluralsight,IT security basics,Cybersecurity forums,Problem-solving,Entry-level cybersecurity jobs,Network security skills,Course Certificate,Growing in tech sector,Medium,Master basic cybersecurity tools,"27, Barcelona, Medium"
-,PaidSystem,Film Production Student,Prague Film Academy,Film and media career,International film festivals,Storytelling and creativity,Assistant roles in film studios,Directing and cinematography,Diploma,Respected globally,High,Learn advanced film production,"25, Prague, Medium"
+FreeSystem,Physics Master's Student,University of Copenhagen,Research excellence,Academic conferences,Critical thinking skills,Academia and R&D,Advanced mathematical skills,Degree Certificate,Respected regionally,High,Conduct physics-based research,"26, Copenhagen, High"
+FreeSystem,Data Analysis Learner,edX,Career change,Online learning forums,Analytical reasoning,Transition to data jobs,Statistical data analysis,Course Certificate,Growing recognition,Medium,Master data analytics tools,"28, Berlin, Medium"
+PaidSystem,Law Graduate,Yale Law School,Legal proficiency,Peer legal study groups,Negotiation and logic skills,Join top-tier law firms,Legal research skills,Degree Certificate,Prestigious,High,Understand constitutional law,"27, New York, High"
+FreeSystem,Electrician Apprentice,French Trade School,Trade proficiency,Trade events,Technical expertise,Employment in energy sectors,Practical electrical systems,Trade Certification,Trusted locally,Medium,Master electrical systems design,"21, Paris, Medium"
+PaidSystem,IB Diploma Graduate,UWC Atlantic College,Admission to Ivy League,International cultural exchanges,Global awareness,Higher education opportunities,Critical academic preparation,IB Diploma,Globally respected,High,Prepare for interdisciplinary study,"17, London, High"
+FreeSystem,Biology PhD Student,University of Zurich,Research excellence,Research symposiums,Critical problem-solving,Academia and innovation,Advanced research methodologies,Doctoral Degree,Respected worldwide,High,Innovate in biological sciences,"32, Zurich, High"
+PaidSystem,Front-End Developer,Udacity,Tech employment,Virtual hackathons,Problem-solving skills,Immediate job placement,Responsive web design,Bootcamp Certificate,Growing in tech,Medium,Develop full-stack front-end apps,"24, Madrid, Medium"
+FreeSystem,Science High School Student,Helsinki Public High School,STEM foundations,Local science fairs,Teamwork and basic research,University preparation,Foundational STEM skills,High School Diploma,Respected locally,Medium,Prepare for STEM careers,"18, Helsinki, Low"
+PaidSystem,Fine Arts Student,Royal College of Art,Media and design career,Art exhibitions,Artistic creativity,Employment in media studios,Professional design skills,Diploma,Respected in industry,Medium,Master multimedia design tools,"22, Florence, Medium"
+PaidSystem,AI Engineer Trainee,Coursera,AI career progression,AI industry webinars,Independent learning,Develop AI-based applications,Machine learning tools,Course Certificate,Growing recognition,Medium,Master AI frameworks,"26, Amsterdam, Medium"
+PaidSystem,Pastry Chef Trainee,Le Cordon Bleu,Culinary mastery,Culinary networking events,Creativity and precision,Work in fine-dining restaurants,Gourmet pastry techniques,Culinary Diploma,Prestigious globally,High,Master advanced pastry arts,"25, Paris, High"
+PaidSystem,Finance MBA Candidate,Wharton Business School,Leadership in finance,Finance networking events,Leadership and analysis,C-Suite career progression,Advanced financial strategy,MBA Degree,Prestigious globally,High,Excel in global finance leadership,"30, Philadelphia, High"
+FreeSystem,Welding Trainee,Swedish Technical College,Industrial trade skills,Regional trade competitions,Technical precision skills,Employment in manufacturing,Practical welding techniques,Trade Certification,Respected regionally,Medium,Master precision welding techniques,"20, Stockholm, Low"
+FreeSystem,Cybersecurity Enthusiast,Pluralsight,IT security basics,Cybersecurity forums,Problem-solving,Entry-level cybersecurity jobs,Network security skills,Course Certificate,Growing in tech sector,Medium,Master basic cybersecurity tools,"27, Barcelona, Medium"
+PaidSystem,Film Production Student,Prague Film Academy,Film and media career,International film festivals,Storytelling and creativity,Assistant roles in film studios,Directing and cinematography,Diploma,Respected globally,High,Learn advanced film production,"25, Prague, Medium"
