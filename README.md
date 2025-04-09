@@ -5,7 +5,7 @@
    **Deadline: November 23**
 2. Followed by the theoretical framework (Sergei/Alice)  /22.11.24 - draft by Alice/
    **Deadline: November 26**
-3. And the methodology section (Fran/Zizhe)  
+3. And the methodology section (Zizhe)  
    **Deadline: November 30**
 
 ### Part 2: Knowledge Representation Section
