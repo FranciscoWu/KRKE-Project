@@ -4,12 +4,17 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
+
+<https://raw.githubusercontent.com/FranciscoWu/KRKE-Project/refs/heads/main/edu-instances.ttl> rdf:type owl:Ontology ;
+    owl:imports <https://raw.githubusercontent.com/FranciscoWu/KRKE-Project/refs/heads/main/edu-ontology.ttl> .
+
+
 :Bachelor_of_Science_1 rdf:type :Learner ;
   rdfs:label "Bachelor of Science"@en ;
   :choosesEducationalPath :FreeEducationSystem_Helsinki ;
   :hasLearningObjective "Gain foundational STEM knowledge" ;
   :hasDemographics :Demographics_Helsinki_1 ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -50,7 +55,7 @@
   :choosesEducationalPath :PaidEducationSystem_Stanford ;
   :hasLearningObjective "Master advanced AI methodologies" ;
   :hasDemographics :Demographics_Stanford_2 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -90,7 +95,7 @@
   :choosesEducationalPath :FreeEducationSystem_Stockholm_HighSchool ;
   :hasLearningObjective "Prepare for university studies" ;
   :hasDemographics :Demographics_Stockholm_HS ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -131,7 +136,7 @@
   :choosesEducationalPath :PaidEducationSystem_LeCordonBleu ;
   :hasLearningObjective "Master fine dining techniques" ;
   :hasDemographics :Demographics_LeCordonBleu ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -171,7 +176,7 @@
   :choosesEducationalPath :FreeEducationSystem_German_VocSchool ;
   :hasLearningObjective "Develop strong trade skills" ;
   :hasDemographics :Demographics_GermanTrade ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -212,7 +217,7 @@
   :choosesEducationalPath :PaidEducationSystem_Harvard_Business ;
   :hasLearningObjective "Gain advanced leadership skills" ;
   :hasDemographics :Demographics_Harvard_Biz ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -252,7 +257,7 @@
   :choosesEducationalPath :FreeEducationSystem_UKGov ;
   :hasLearningObjective "Build real-world software skills" ;
   :hasDemographics :Demographics_UKGov_7 ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -293,7 +298,7 @@
   :choosesEducationalPath :PaidEducationSystem_LBS ;
   :hasLearningObjective "Gain expertise in financial leadership" ;
   :hasDemographics :Demographics_LBS_8 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -333,7 +338,7 @@
   :choosesEducationalPath :FreeEducationSystem_Karolinska ;
   :hasLearningObjective "Develop clinical and research skills" ;
   :hasDemographics :Demographics_Karolinska_9 ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -374,7 +379,7 @@
   :choosesEducationalPath :PaidEducationSystem_Google ;
   :hasLearningObjective "Build expertise in online marketing" ;
   :hasDemographics :Demographics_Google_10 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :NegativeAttitude .
 
@@ -414,7 +419,7 @@
   :choosesEducationalPath :FreeEducationSystem_Finnish_Trade ;
   :hasLearningObjective "Gain hands-on electrical skills" ;
   :hasDemographics :Demographics_Finnish_11 ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -455,7 +460,7 @@
   :choosesEducationalPath :PaidEducationSystem_Ironhack ;
   :hasLearningObjective "Build full-stack web development skills" ;
   :hasDemographics :Demographics_Ironhack_12 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -495,7 +500,7 @@
   :choosesEducationalPath :FreeEducationSystem_Oxford_Philosophy ;
   :hasLearningObjective "Master critical research methodologies" ;
   :hasDemographics :Demographics_Oxford_13 ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -536,7 +541,7 @@
   :choosesEducationalPath :PaidEducationSystem_Gobelins ;
   :hasLearningObjective "Develop professional animation skills" ;
   :hasDemographics :Demographics_Gobelins_14 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -576,7 +581,7 @@
   :choosesEducationalPath :FreeEducationSystem_Vienna ;
   :hasLearningObjective "Master advanced sociological analysis" ;
   :hasDemographics :Demographics_Vienna_15 ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -617,7 +622,7 @@
   :choosesEducationalPath :PaidEducationSystem_GeneralAssembly ;
   :hasLearningObjective "Develop practical UX design skills" ;
   :hasDemographics :Demographics_GA_16 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -657,7 +662,7 @@
   :choosesEducationalPath :PaidEducationSystem_Sydney ;
   :hasLearningObjective "Master advanced legal principles" ;
   :hasDemographics :Demographics_Sydney_17 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -697,7 +702,7 @@
   :choosesEducationalPath :FreeEducationSystem_Helsinki_Bio ;
   :hasLearningObjective "Gain foundational biological knowledge" ;
   :hasDemographics :Demographics_Helsinki_18 ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -738,7 +743,7 @@
   :choosesEducationalPath :PaidEducationSystem_EHL ;
   :hasLearningObjective "Master hospitality leadership" ;
   :hasDemographics :Demographics_EHL_19 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -778,7 +783,7 @@
   :choosesEducationalPath :FreeEducationSystem_TokyoTech ;
   :hasLearningObjective "Build robotics engineering skills" ;
   :hasDemographics :Demographics_TokyoTech_20 ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -819,7 +824,7 @@
   :choosesEducationalPath :PaidEducationSystem_Parsons ;
   :hasLearningObjective "Master professional interior design" ;
   :hasDemographics :Demographics_Parsons_21 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -859,7 +864,7 @@
   :choosesEducationalPath :FreeEducationSystem_TUDelft ;
   :hasLearningObjective "Develop expertise in renewable energy" ;
   :hasDemographics :Demographics_TUDelft_22 ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -900,7 +905,7 @@
   :choosesEducationalPath :PaidEducationSystem_JohnsHopkins ;
   :hasLearningObjective "Master advanced medical research" ;
   :hasDemographics :Demographics_JH_23 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -940,7 +945,7 @@
   :choosesEducationalPath :FreeEducationSystem_NUS ;
   :hasLearningObjective "Develop expertise in civil infrastructure" ;
   :hasDemographics :Demographics_NUS_24 ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -981,7 +986,7 @@
   :choosesEducationalPath :PaidEducationSystem_MIT ;
   :hasLearningObjective "Master advanced cybersecurity techniques" ;
   :hasDemographics :Demographics_MIT_25 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1021,7 +1026,7 @@
   :choosesEducationalPath :FreeEducationSystem_Glasgow ;
   :hasLearningObjective "Develop foundational graphic design skills" ;
   :hasDemographics :Demographics_Glasgow_26 ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1062,7 +1067,7 @@
   :choosesEducationalPath :PaidEducationSystem_EmbryRiddle ;
   :hasLearningObjective "Gain expertise in aviation leadership" ;
   :hasDemographics :Demographics_EmbryRiddle_27 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1102,7 +1107,7 @@
   :choosesEducationalPath :FreeEducationSystem_CapeTown ;
   :hasLearningObjective "Master effective teaching strategies" ;
   :hasDemographics :Demographics_CapeTown_28 ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1143,7 +1148,7 @@
   :choosesEducationalPath :PaidEducationSystem_Azure ;
   :hasLearningObjective "Build advanced cloud computing skills" ;
   :hasDemographics :Demographics_Azure_29 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1183,7 +1188,7 @@
   :choosesEducationalPath :FreeEducationSystem_Zurich ;
   :hasLearningObjective "Develop expertise in chemical analysis" ;
   :hasDemographics :Demographics_Zurich_30 ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1224,7 +1229,7 @@
   :choosesEducationalPath :PaidEducationSystem_VFS ;
   :hasLearningObjective "Master storytelling through animation" ;
   :hasDemographics :Demographics_VFS_31 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1264,7 +1269,7 @@
   :choosesEducationalPath :FreeEducationSystem_Edinburgh ;
   :hasLearningObjective "Master policy research methodologies" ;
   :hasDemographics :Demographics_Edinburgh_32 ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1305,7 +1310,7 @@
   :choosesEducationalPath :PaidEducationSystem_Babson ;
   :hasLearningObjective "Launch and scale successful businesses" ;
   :hasDemographics :Demographics_Babson_33 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1345,7 +1350,7 @@
   :choosesEducationalPath :FreeEducationSystem_Oxford_History ;
   :hasLearningObjective "Master historical research methodologies" ;
   :hasDemographics :Demographics_Oxford_34 ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1386,7 +1391,7 @@
   :choosesEducationalPath :PaidEducationSystem_Coursera ;
   :hasLearningObjective "Build expertise in full-stack development" ;
   :hasDemographics :Demographics_Coursera_35 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1426,7 +1431,7 @@
   :choosesEducationalPath :FreeEducationSystem_Berkeley ;
   :hasLearningObjective "Develop knowledge in sustainability" ;
   :hasDemographics :Demographics_Berkeley_36 ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1467,7 +1472,7 @@
   :choosesEducationalPath :PaidEducationSystem_SCAD ;
   :hasLearningObjective "Develop mastery in game design" ;
   :hasDemographics :Demographics_SCAD_37 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1507,7 +1512,7 @@
   :choosesEducationalPath :FreeEducationSystem_Wageningen ;
   :hasLearningObjective "Master sustainable agriculture methods" ;
   :hasDemographics :Demographics_Wageningen_38 ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1548,7 +1553,7 @@
   :choosesEducationalPath :PaidEducationSystem_ESSEC ;
   :hasLearningObjective "Build expertise in luxury brand management" ;
   :hasDemographics :Demographics_ESSEC_39 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1588,7 +1593,7 @@
   :choosesEducationalPath :PaidEducationSystem_Stanford_CS ;
   :hasLearningObjective "Master advanced algorithms and machine learning" ;
   :hasDemographics :Demographics_Stanford_40 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1628,7 +1633,7 @@
   :choosesEducationalPath :FreeEducationSystem_Copenhagen ;
   :hasLearningObjective "Conduct physics-based research" ;
   :hasDemographics :Demographics_Copenhagen_41 ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1669,7 +1674,7 @@
   :choosesEducationalPath :FreeEducationSystem_edX ;
   :hasLearningObjective "Master data analytics tools" ;
   :hasDemographics :Demographics_edX_42 ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1710,7 +1715,7 @@
   :choosesEducationalPath :PaidEducationSystem_Yale ;
   :hasLearningObjective "Understand constitutional law" ;
   :hasDemographics :Demographics_Yale_43 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1750,7 +1755,7 @@
   :choosesEducationalPath :FreeEducationSystem_FrenchTrade ;
   :hasLearningObjective "Master electrical systems design" ;
   :hasDemographics :Demographics_FrenchTrade_44 ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1791,7 +1796,7 @@
   :choosesEducationalPath :PaidEducationSystem_UWC ;
   :hasLearningObjective "Prepare for interdisciplinary study" ;
   :hasDemographics :Demographics_UWC_45 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1831,7 +1836,7 @@
   :choosesEducationalPath :FreeEducationSystem_Zurich_Bio ;
   :hasLearningObjective "Innovate in biological sciences" ;
   :hasDemographics :Demographics_Zurich_46 ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1872,7 +1877,7 @@
   :choosesEducationalPath :PaidEducationSystem_Udacity_2 ;
   :hasLearningObjective "Develop full-stack front-end apps" ;
   :hasDemographics :Demographics_Udacity_47 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1912,7 +1917,7 @@
   :choosesEducationalPath :FreeEducationSystem_Helsinki_HS ;
   :hasLearningObjective "Prepare for STEM careers" ;
   :hasDemographics :Demographics_Helsinki_48 ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1953,7 +1958,7 @@
   :choosesEducationalPath :PaidEducationSystem_RCA ;
   :hasLearningObjective "Master multimedia design tools" ;
   :hasDemographics :Demographics_RCA_49 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -1993,7 +1998,7 @@
   :choosesEducationalPath :PaidEducationSystem_Coursera_AI ;
   :hasLearningObjective "Master AI frameworks" ;
   :hasDemographics :Demographics_Coursera_50 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -2033,7 +2038,7 @@
   :choosesEducationalPath :PaidEducationSystem_LeCordonBleu_Pastry ;
   :hasLearningObjective "Master advanced pastry arts" ;
   :hasDemographics :Demographics_LCB_51 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -2073,7 +2078,7 @@
   :choosesEducationalPath :PaidEducationSystem_Wharton ;
   :hasLearningObjective "Excel in global finance leadership" ;
   :hasDemographics :Demographics_Wharton_52 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -2113,7 +2118,7 @@
   :choosesEducationalPath :FreeEducationSystem_STC ;
   :hasLearningObjective "Master precision welding techniques" ;
   :hasDemographics :Demographics_STC_53 ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -2154,7 +2159,7 @@
   :choosesEducationalPath :FreeEducationSystem_Pluralsight ;
   :hasLearningObjective "Master basic cybersecurity tools" ;
   :hasDemographics :Demographics_Pluralsight_54 ;
-  :hasPerspectiveOf edu:FreeEducationSystem ;
+  :hasPerspectiveOf :FreeEducationSystem ;
   :hasViewpoint :ExternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
@@ -2195,7 +2200,7 @@
   :choosesEducationalPath :PaidEducationSystem_PragueFilm ;
   :hasLearningObjective "Learn advanced film production" ;
   :hasDemographics :Demographics_PragueFilm_55 ;
-  :hasPerspectiveOf edu:PaidEducationSystem ;
+  :hasPerspectiveOf :PaidEducationSystem ;
   :hasViewpoint :InternalViewpoint ;
   :hasAttitude :PositiveAttitude .
 
