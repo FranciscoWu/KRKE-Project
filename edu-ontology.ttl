@@ -6,10 +6,13 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix frame: <http://etna.istc.cnr.it/framester2/data/framestercore/> .
-@base <http://www.semanticweb.org/ontologies/2024/EDU/> .
+@base <https://raw.githubusercontent.com/FranciscoWu/KRKE-Project/refs/heads/main/edu-ontology.ttl> .
 
-<http://www.semanticweb.org/ontologies/2024/EDU> rdf:type owl:Ontology ;
-                                                  owl:imports <http://www.semanticweb.org/ontologies/2024/EDU> .
+<https://raw.githubusercontent.com/FranciscoWu/KRKE-Project/refs/heads/main/edu-ontology.ttl> rdf:type owl:Ontology ;
+    rdfs:comment "An ontology modeling educational systems with focus on perspectives and attitudes towards free and paid education."@en ;
+    dc:creator "Alisa Antonova, Sergei Slinkin, Yifan Wu, Zizhe Lin"@en ;
+    dc:title "Educational Perspectives Ontology"@en ;
+    owl:versionInfo "1.0" .
 
 #################################################################
 #    Object Properties
@@ -18,20 +21,23 @@
 ###  http://www.semanticweb.org/ontologies/2024/EDU/choosesEducationalPath
 :choosesEducationalPath rdf:type owl:ObjectProperty ;
                         rdfs:domain :Learner ;
-                        rdfs:range :EducationalSystem .
+                        rdfs:range :EducationalSystem ;
+                        rdfs:comment "Relates a learner to an educational system, indicating the learner's choice of educational path."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/deliversContent
 :deliversContent rdf:type owl:ObjectProperty ;
                  rdfs:domain :EducationalSystem ;
-                 rdfs:range :Content .
+                 rdfs:range :Content ;
+                 rdfs:comment "Links an educational system to the content it provides to learners."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/determines
 :determines rdf:type owl:ObjectProperty ;
             rdfs:domain :Perspective ;
             rdfs:range :Attitude ;
-            rdfs:label "determines"@en .
+            rdfs:label "determines"@en ;
+            rdfs:comment "Captures how a viewpoint or perspective influences a person's attitude toward education."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/expressedVia
@@ -42,13 +48,15 @@
                                          :Stereotype
                                        )
                          ] ;
-              rdfs:label "expressed via"@en .
+              rdfs:label "expressed via"@en ;
+              rdfs:comment "Indicates the means through which attitudes toward education are manifested, either through moral values or stereotypes."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/funds
 :funds rdf:type owl:ObjectProperty ;
        rdfs:domain :Sponsors ;
-       rdfs:range :FreeEducationSystem .
+       rdfs:range :FreeEducationSystem ;
+       rdfs:comment "Connects sponsors to the free educational systems they financially support."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/hasAttitude
@@ -56,65 +64,75 @@
              owl:inverseOf :isAttitudeOf ;
              rdfs:domain :People ;
              rdfs:range :Attitude ;
-             rdfs:label "has attitude"@en .
+             rdfs:label "has attitude"@en ;
+             rdfs:comment "Links individuals to their evaluative stance on education, such as positive, negative, or neutral attitudes."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/hasCredibility
 :hasCredibility rdf:type owl:ObjectProperty ;
                 rdfs:domain :EducationalSystem ;
-                rdfs:range :Credibility .
+                rdfs:range :Credibility ;
+                rdfs:comment "Indicates the credibility level associated with an educational system, reflecting its perceived legitimacy."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/hasDemographics
 :hasDemographics rdf:type owl:ObjectProperty ;
                  rdfs:domain :Learner ;
-                 rdfs:range :LearnerDemographics .
+                 rdfs:range :LearnerDemographics ;
+                 rdfs:comment "Associates a learner with their demographic information such as age, location, and income level."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/hasInfluencingFactors
 :hasInfluencingFactors rdf:type owl:ObjectProperty ;
                        rdfs:domain :EducationalSystem ;
                        rdfs:range :Influence ;
-                       rdfs:label "has influencing factors"@en .
+                       rdfs:label "has influencing factors"@en ;
+                       rdfs:comment "Connects an educational system to various factors that influence perceptions about it."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/hasLearningObjective
 :hasLearningObjective rdf:type owl:ObjectProperty ;
                       rdfs:domain :Learner ;
-                      rdfs:range :LearningObjective .
+                      rdfs:range :LearningObjective ;
+                      rdfs:comment "Relates a learner to their specific learning goals or objectives."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/hasOutcome
 :hasOutcome rdf:type owl:ObjectProperty ;
             rdfs:domain :EducationalSystem ;
-            rdfs:range :Outcome .
+            rdfs:range :Outcome ;
+            rdfs:comment "Connects an educational system to its outcomes, such as skill development, personal growth, or career impact."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/hasParticipant
 :hasParticipant rdf:type owl:ObjectProperty ;
                 rdfs:domain :EducationalSystem ;
                 rdfs:range :People ;
-                rdfs:label "has participant"@en .
+                rdfs:label "has participant"@en ;
+                rdfs:comment "Relates an educational system to the people who participate in it as learners, instructors, or other stakeholders."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/hasPerspectiveOf
 :hasPerspectiveOf rdf:type owl:ObjectProperty ;
                   rdfs:domain :People ;
                   rdfs:range :EducationalSystem ;
-                  rdfs:label "has perspective of"@en .
+                  rdfs:label "has perspective of"@en ;
+                  rdfs:comment "Captures how a person perceives a specific educational system, reflecting their individual viewpoint."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/hasPerspectiveShift
 :hasPerspectiveShift rdf:type owl:ObjectProperty ;
                      rdfs:domain :EducationalSystem ;
                      rdfs:range :PerspectiveShift ;
-                     rdfs:label "has perspective shift"@en .
+                     rdfs:label "has perspective shift"@en ;
+                     rdfs:comment "Relates an educational system to changes in perceptions about it over time."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/hasSocietalPerception
 :hasSocietalPerception rdf:type owl:ObjectProperty ;
                        rdfs:domain :EducationalSystem ;
-                       rdfs:range :SocietalPerception .
+                       rdfs:range :SocietalPerception ;
+                       rdfs:comment "Links an educational system to how it is perceived by society at large."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/hasViewpoint
@@ -126,52 +144,61 @@
                                          :InternalViewpoint
                                        )
                          ] ;
-              rdfs:label "has viewpoint"@en .
+              rdfs:label "has viewpoint"@en ;
+              rdfs:comment "Relates a person to their perspective on education, either from an external (observer) or internal (participant) standpoint."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/influences
 :influences rdf:type owl:ObjectProperty ;
             rdfs:domain :Influence ;
             rdfs:range :Attitude ;
-            rdfs:label "influences"@en .
+            rdfs:label "influences"@en ;
+            rdfs:comment "Relates an influencing factor to the attitude it shapes or affects in relation to education."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/isAttitudeOf
-:isAttitudeOf rdf:type owl:ObjectProperty .
+:isAttitudeOf rdf:type owl:ObjectProperty ;
+              rdfs:comment "The inverse property of hasAttitude, relating an attitude back to the person who holds it."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/isStereotypeOf
 :isStereotypeOf rdf:type owl:ObjectProperty ;
-                owl:inverseOf :triggersStereotype .
+                owl:inverseOf :triggersStereotype ;
+                rdfs:comment "The inverse property of triggersStereotype, indicating which educational system a stereotype is associated with."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/isUsedBy
 :isUsedBy rdf:type owl:ObjectProperty ;
           rdfs:domain :EducationalSystem ;
-          rdfs:range :Learner .
+          rdfs:range :Learner ;
+          rdfs:comment "Connects an educational system to the learners who use or participate in it."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/isViewpointOf
-:isViewpointOf rdf:type owl:ObjectProperty .
+:isViewpointOf rdf:type owl:ObjectProperty ;
+               rdfs:comment "The inverse property of hasViewpoint, relating a viewpoint back to the person who holds it."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/offeredBy
 :offeredBy rdf:type owl:ObjectProperty ;
            rdfs:domain :Certification ;
-           rdfs:range :EducationalSystem .
+           rdfs:range :EducationalSystem ;
+           rdfs:comment "Links a certification to the educational system that offers or awards it."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/provides
 :provides rdf:type owl:ObjectProperty ;
           rdfs:domain :EducationalProviders ;
-          rdfs:range :EducationalSystem .
+          rdfs:range :EducationalSystem ;
+          rdfs:comment "Relates educational providers to the educational systems they offer or manage."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/triggersStereotype
 :triggersStereotype rdf:type owl:ObjectProperty ;
                     rdfs:domain :EducationalSystem ;
                     rdfs:range :Stereotype ;
-                    rdfs:label "triggers stereotype"@en .
+                    rdfs:label "triggers stereotype"@en ;
+                    rdfs:comment "Connects an educational system to stereotypes that are commonly associated with or triggered by it."@en .
 
 
 #################################################################
@@ -181,13 +208,15 @@
 ###  http://www.semanticweb.org/ontologies/2024/EDU/belongsToAgeGroup
 :belongsToAgeGroup rdf:type owl:DatatypeProperty ;
                    rdfs:domain :LearnerDemographics ;
-                   rdfs:range xsd:string .
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Specifies the age group to which a learner belongs, providing demographic information."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/hasAccessibility
 :hasAccessibility rdf:type owl:DatatypeProperty ;
                   rdfs:domain :EducationalSystem ;
-                  rdfs:range xsd:string .
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Indicates the degree to which an educational system is accessible to different learners."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/hasContent
@@ -199,55 +228,64 @@
                                       )
                         ] ;
             rdfs:range xsd:string ;
-            rdfs:label "has content"@en .
+            rdfs:label "has content"@en ;
+            rdfs:comment "Provides a textual description of the content of an influence, perspective shift, or stereotype."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/hasContentFormat
 :hasContentFormat rdf:type owl:DatatypeProperty ;
                   rdfs:domain :Content ;
-                  rdfs:range xsd:string .
+                  rdfs:range xsd:string ;
+                  rdfs:comment "Specifies the format in which educational content is presented, such as video, text, or PDF."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/hasContentLanguage
 :hasContentLanguage rdf:type owl:DatatypeProperty ;
                     rdfs:domain :Content ;
-                    rdfs:range xsd:string .
+                    rdfs:range xsd:string ;
+                    rdfs:comment "Indicates the language in which educational content is presented."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/hasCost
 :hasCost rdf:type owl:DatatypeProperty ;
          rdfs:domain :EducationalSystem ;
-         rdfs:range xsd:decimal .
+         rdfs:range xsd:decimal ;
+         rdfs:comment "Specifies the financial cost associated with an educational system, relevant particularly for paid systems."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/hasDeliveryMethod
 :hasDeliveryMethod rdf:type owl:DatatypeProperty ;
                    rdfs:domain :Content ;
-                   rdfs:range xsd:string .
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Describes the method by which educational content is delivered, such as online, in-person, or hybrid."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/hasEducationalBackground
 :hasEducationalBackground rdf:type owl:DatatypeProperty ;
                           rdfs:domain :LearnerDemographics ;
-                          rdfs:range xsd:string .
+                          rdfs:range xsd:string ;
+                          rdfs:comment "Describes the prior educational history or background of a learner."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/hasIncomeLevel
 :hasIncomeLevel rdf:type owl:DatatypeProperty ;
                 rdfs:domain :LearnerDemographics ;
-                rdfs:range xsd:string .
+                rdfs:range xsd:string ;
+                rdfs:comment "Indicates the income level of a learner, providing context for their educational choices."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/hasQualityMetrics
 :hasQualityMetrics rdf:type owl:DatatypeProperty ;
                    rdfs:domain :Content ;
-                   rdfs:range xsd:string .
+                   rdfs:range xsd:string ;
+                   rdfs:comment "Specifies metrics used to assess the quality of educational content."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/locatedIn
 :locatedIn rdf:type owl:DatatypeProperty ;
            rdfs:domain :LearnerDemographics ;
-           rdfs:range xsd:string .
+           rdfs:range xsd:string ;
+           rdfs:comment "Specifies the geographical location of a learner, providing context for their educational opportunities."@en .
 
 
 #################################################################
@@ -257,99 +295,115 @@
 ###  http://www.semanticweb.org/ontologies/2024/EDU/Agent
 :Agent rdf:type owl:Class ;
        rdfs:subClassOf owl:Thing ;
-       rdfs:label "Agent"@en .
+       rdfs:label "Agent"@en ;
+       rdfs:comment "A person or organization that acts within the educational system, including providers and sponsors."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/Attitude
 :Attitude rdf:type owl:Class ;
           rdfs:subClassOf owl:Thing ;
-          rdfs:label "Attitude"@en .
+          rdfs:label "Attitude"@en ;
+          rdfs:comment "An evaluative stance toward education, which can be positive, negative, or neutral."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/Certification
 :Certification rdf:type owl:Class ;
                rdfs:subClassOf owl:Thing ;
-               rdfs:label "Certification"@en .
+               rdfs:label "Certification"@en ;
+               rdfs:comment "An official document or credential awarded upon successful completion of an educational program."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/Content
 :Content rdf:type owl:Class ;
          rdfs:subClassOf owl:Thing ;
-         rdfs:label "Content"@en .
+         rdfs:label "Content"@en ;
+         rdfs:comment "The materials, resources, and information provided within an educational system to facilitate learning."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/Credibility
 :Credibility rdf:type owl:Class ;
              rdfs:subClassOf owl:Thing ;
-             rdfs:label "Credibility"@en .
+             rdfs:label "Credibility"@en ;
+             rdfs:comment "The degree to which an educational system is regarded as legitimate and capable of delivering quality learning outcomes."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/EducationalProviders
 :EducationalProviders rdf:type owl:Class ;
                       rdfs:subClassOf :Agent ;
-                      rdfs:label "Educational Providers"@en .
+                      rdfs:label "Educational Providers"@en ;
+                      rdfs:comment "Organizations or entities that offer educational services, resources, or programs to learners."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/EducationalSystem
 :EducationalSystem rdf:type owl:Class ;
                    rdfs:subClassOf owl:Thing ;
-                   rdfs:label "Educational System"@en .
+                   rdfs:label "Educational System"@en ;
+                   rdfs:comment "A structured framework within which education is delivered, encompassing institutions, policies, curricula, and resources."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/ExternalViewpoint
 :ExternalViewpoint rdf:type owl:Class ;
                    rdfs:subClassOf :Perspective ;
                    owl:disjointWith :InternalViewpoint ;
-                   rdfs:label "External Viewpoint"@en .
+                   rdfs:label "External Viewpoint"@en ;
+                   rdfs:comment "The perspective of individuals outside the educational system, such as employers, policymakers, or society at large."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/FreeEducationSystem
 :FreeEducationSystem rdf:type owl:Class ;
                      rdfs:subClassOf :EducationalSystem ;
                      owl:disjointWith :PaidEducationSystem ;
-                     rdfs:label "Free Educational System"@en .
+                     rdfs:label "Free Educational System"@en ;
+                     rdfs:comment "An educational system that does not require learners to pay for access to its services, resources, or content."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/ImpactOnCareer
 :ImpactOnCareer rdf:type owl:Class ;
                 rdfs:subClassOf :Outcome ;
-                rdfs:label "Impact on Career"@en .
+                rdfs:label "Impact on Career"@en ;
+                rdfs:comment "The influence that education has on a learner's professional trajectory, including career advancement and job opportunities."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/Influence
 :Influence rdf:type owl:Class ;
            rdfs:subClassOf owl:Thing ;
-           rdfs:label "Influence"@en .
+           rdfs:label "Influence"@en ;
+           rdfs:comment "Factors that shape perspectives and attitudes toward education, including institutional, cultural, or media factors."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/InternalViewpoint
 :InternalViewpoint rdf:type owl:Class ;
                    rdfs:subClassOf :Perspective ;
-                   rdfs:label "Internal Viewpoint"@en .
+                   rdfs:label "Internal Viewpoint"@en ;
+                   rdfs:comment "The perspective of individuals who are directly involved in the educational system, such as students or educators."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/Learner
 :Learner rdf:type owl:Class ;
          rdfs:subClassOf :People ;
-         rdfs:label "Learner"@en .
+         rdfs:label "Learner"@en ;
+         rdfs:comment "An individual engaged in the process of acquiring knowledge, skills, or competencies through education."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/LearnerDemographics
 :LearnerDemographics rdf:type owl:Class ;
                      rdfs:subClassOf owl:Thing ;
-                     rdfs:label "Learner Demographics"@en .
+                     rdfs:label "Learner Demographics"@en ;
+                     rdfs:comment "Characteristics and attributes of a learner population, such as age, location, and income level."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/LearningObjective
 :LearningObjective rdf:type owl:Class ;
                    rdfs:subClassOf owl:Thing ;
-                   rdfs:label "Learning Objective"@en .
+                   rdfs:label "Learning Objective"@en ;
+                   rdfs:comment "A specific goal or intended outcome that an educational activity aims to achieve."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/MoralValue
 :MoralValue rdf:type owl:Class ;
             rdfs:subClassOf owl:Thing ;
-            rdfs:label "Moral Value"@en .
+            rdfs:label "Moral Value"@en ;
+            rdfs:comment "Ethical principles or values that influence attitudes toward education and educational choices."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/NegativeAttitude
@@ -357,87 +411,101 @@
                   rdfs:subClassOf :Attitude ;
                   owl:disjointWith :NeutralAttitude ,
                                    :PositiveAttitude ;
-                  rdfs:label "Negative Attitude"@en .
+                  rdfs:label "Negative Attitude"@en ;
+                  rdfs:comment "An unfavorable or critical stance toward certain aspects of education, often linked to stereotypes or dissatisfaction."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/NetworkingOpportunities
 :NetworkingOpportunities rdf:type owl:Class ;
                          rdfs:subClassOf :Outcome ;
-                         rdfs:label "Networking Opportunities"@en .
+                         rdfs:label "Networking Opportunities"@en ;
+                         rdfs:comment "Professional or social connections that learners establish during their educational journey."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/NeutralAttitude
 :NeutralAttitude rdf:type owl:Class ;
                  rdfs:subClassOf :Attitude ;
                  owl:disjointWith :PositiveAttitude ;
-                 rdfs:label "Neutral Attitude"@en .
+                 rdfs:label "Neutral Attitude"@en ;
+                 rdfs:comment "A balanced or impartial stance toward education, neither strongly favorable nor unfavorable."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/Outcome
 :Outcome rdf:type owl:Class ;
          rdfs:subClassOf owl:Thing ;
-         rdfs:label "Outcome"@en .
+         rdfs:label "Outcome"@en ;
+         rdfs:comment "The measurable results or achievements that learners attain through their engagement with an educational system."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/PaidEducationSystem
 :PaidEducationSystem rdf:type owl:Class ;
                      rdfs:subClassOf :EducationalSystem ;
-                     rdfs:label "Paid Educational System"@en .
+                     rdfs:label "Paid Educational System"@en ;
+                     rdfs:comment "An educational system that requires learners to pay for access to its services, resources, or content."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/People
 :People rdf:type owl:Class ;
         rdfs:subClassOf owl:Thing ;
         rdfs:comment "People who have perspectives on educational systems"@en ;
-        rdfs:label "People"@en .
+        rdfs:label "People"@en ;
+        rdfs:comment "Individuals who interact with or have perspectives on educational systems, including learners and non-participants."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/PersonalGrowth
 :PersonalGrowth rdf:type owl:Class ;
                 rdfs:subClassOf :Outcome ;
-                rdfs:label "Personal Growth"@en .
+                rdfs:label "Personal Growth"@en ;
+                rdfs:comment "The development of a learner's emotional, social, and intellectual capabilities resulting from the educational process."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/Perspective
 :Perspective rdf:type owl:Class ;
              rdfs:subClassOf owl:Thing ;
-             rdfs:label "Perspective"@en .
+             rdfs:label "Perspective"@en ;
+             rdfs:comment "A viewpoint or lens through which an individual perceives and evaluates educational systems."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/PerspectiveShift
 :PerspectiveShift rdf:type owl:Class ;
                   rdfs:subClassOf owl:Thing ;
-                  rdfs:label "Perspective Shift"@en .
+                  rdfs:label "Perspective Shift"@en ;
+                  rdfs:comment "Changes in perceptions about education over time, reflecting evolving attitudes or experiences."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/PositiveAttitude
 :PositiveAttitude rdf:type owl:Class ;
                   rdfs:subClassOf :Attitude ;
-                  rdfs:label "Positive Attitude"@en .
+                  rdfs:label "Positive Attitude"@en ;
+                  rdfs:comment "A favorable stance toward education, often tied to recognition of its value or benefits."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/SkillDevelopment
 :SkillDevelopment rdf:type owl:Class ;
                   rdfs:subClassOf :Outcome ;
-                  rdfs:label "Skill Development"@en .
+                  rdfs:label "Skill Development"@en ;
+                  rdfs:comment "The acquisition and enhancement of specific abilities or competencies through educational processes."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/SocietalPerception
 :SocietalPerception rdf:type owl:Class ;
                     rdfs:subClassOf owl:Thing ;
-                    rdfs:label "Societal Perception"@en .
+                    rdfs:label "Societal Perception"@en ;
+                    rdfs:comment "How society views and values different educational systems or approaches."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/Sponsors
 :Sponsors rdf:type owl:Class ;
           rdfs:subClassOf :Agent ;
-          rdfs:label "Sponsors"@en .
+          rdfs:label "Sponsors"@en ;
+          rdfs:comment "Individuals, organizations, or entities that provide financial support to educational programs or systems."@en .
 
 
 ###  http://www.semanticweb.org/ontologies/2024/EDU/Stereotype
 :Stereotype rdf:type owl:Class ;
             rdfs:subClassOf owl:Thing ;
-            rdfs:label "Stereotype"@en .
+            rdfs:label "Stereotype"@en ;
+            rdfs:comment "Common generalizations or misconceptions about education, educators, or students that influence perceptions."@en .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
